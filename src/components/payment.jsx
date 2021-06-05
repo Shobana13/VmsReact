@@ -121,7 +121,7 @@ class Payment extends Component {
                                             <td>{payment.paymentStatus}</td>
                                             <td>
                                                 <button  style={{marginLeft:"10px"}} onClick = {() => this.updatePaymentStatus(payment.paymentId)} className="btn btn-success">Update</button>
-                                                <button onClick={() => this.cancelPayment(payment.paymentId)} className="btn btn-danger ml-2">Cancel</button>
+                                                <button onClick={() => this.cancelPayment(payment.paymentId)} className="btn btn-danger ml-2">Delete</button>
                                                 <button onClick = {() => this.viewPayment(payment.paymentId)} className = "btn btn-primary ml-2">View</button>
                                             </td>
                                             
