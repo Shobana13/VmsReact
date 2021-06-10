@@ -17,5 +17,8 @@ class DriverService{
       async updateDriver(driverId,driver){
         return await axios.put(DRIVER_API_BASE_URL + "/update/" + driverId,driver);
       }
+      async getDriverByFirstName(firstName){
+        return await axios.get(DRIVER_API_BASE_URL + "/firstname/" + firstName );
+      }
 }
 export default new DriverService()

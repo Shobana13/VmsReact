@@ -4,7 +4,6 @@ class AddDriver extends Component {
     constructor(props){
         super(props)
         this.state = {
-            driverId:'',
             firstName:'',
             lastName: '',
             contactNumber:'',
@@ -21,22 +20,17 @@ class AddDriver extends Component {
         this.changeChargesPerDayHandler=this.changeChargesPerDayHandler.bind(this);
         this.changeLicenseNoHandler=this.changeLicenseNoHandler.bind(this);
         this.saveDriver=this.saveDriver.bind(this);
-        this.changeIdHandler=this.changeIdHandler.bind(this);
     }
 
     saveDriver = (e) => {
         e.preventDefault();
-        let driver={driverId:this.state.driverId,firstName: this.state.firstName, lastName: this.state.lastName,contactNumber: this.state.contactNumber,email: this.state.email,address: this.state.address,chargesPerDay: this.state.chargesPerDay,licenseNo: this.state.licenseNo};
+        let driver={firstName: this.state.firstName, lastName: this.state.lastName,contactNumber: this.state.contactNumber,email: this.state.email,address: this.state.address,chargesPerDay: this.state.chargesPerDay,licenseNo: this.state.licenseNo};
         console.log('driver => '+ JSON.stringify(driver));
 
         DriverService.addDriver(driver).then(res => {
             this.props.history.push(`/driver`);
         });
 
-    }
-
-    changeIdHandler=(event) =>{
-        this.setState({driverId: event.target.value})
     }
 
     changeFirstNameHandler=(event) =>{
@@ -79,40 +73,36 @@ class AddDriver extends Component {
                             <h3 className="text-center">Add Driver</h3>
                             <div className="card-body">
                                 <form>
-                                <div className="form-group">
-                                        <label>DriverId:</label>
-                                        <input placeholder="DriverId" name="DriverId" className="form-control" value={this.state.driverId} onChange={this.changeIdHandler}/>
-                                </div>
-                                    <div className="form-group">
+                                    <div className="form-group text-left">
                                         <label>FirstName:</label>
                                         <input placeholder="FirstName" name="FirstName" className="form-control" value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group text-left">
                                         <label>LastName:</label>
                                         <input placeholder="LastName" name="LastName" className="form-control" value={this.state.lastName} onChange={this.changeLastNameHandler}/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group text-left">
                                         <label>ContactNumber:</label>
                                         <input placeholder="ContactNumber" name="ContactNumber" className="form-control" value={this.state.contactNumber} onChange={this.changeContactNumberHandler}/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group text-left">
                                         <label>Email:</label>
                                         <input placeholder="Email" name="Email" className="form-control" value={this.state.email} onChange={this.changeEmailHandler}/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group text-left">
                                         <label>Address:</label>
                                         <input placeholder="Address" name="Address" className="form-control" value={this.state.address} onChange={this.changeAddressHandler}/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group text-left">
                                         <label>ChargesPerDay:</label>
                                         <input placeholder="ChargesPerDay" name="ChargesPerDay" className="form-control" value={this.state.chargesPerDay} onChange={this.changeChargesPerDayHandler}/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group text-left">
                                         <label>LicenseNo:</label>
                                         <input placeholder="LicenseNo" name="LicenseNo" className="form-control" value={this.state.licenseNo} onChange={this.changeLicenseNoHandler}/>
                                     </div>
-                                    <button className="btn btn-success" onClick={this.saveDriver}> Save</button>
-                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
+                                    <button className="btn btn-success float-right" onClick={this.saveDriver}> Save</button>
+                                    <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
                                 </form>
                             

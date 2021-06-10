@@ -4,26 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
-import { createStore } from 'redux';
-import allReducers from './reducer/index';
+import { createStore} from 'redux';
+import allReducers from './reducers/index';
 import { Provider } from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
+//import thunk from "redux-thunk";
+import store from './redux/store';
+import './CustomCSS/logincss.css';
+import './CustomCSS/vehiclecss.css';
 
-const store = createStore(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
     <Provider store={store}>
     <App />
     </Provider>
-    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
