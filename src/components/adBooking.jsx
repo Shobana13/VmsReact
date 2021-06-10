@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BookingService from '../BookingService/bookingService';
 
-class AddBooking extends Component {
+class AdBooking extends Component {
 
     constructor(props){
         super(props)
@@ -9,15 +9,9 @@ class AddBooking extends Component {
             bookingId:this.props.match.params.bookingId,
             bookingDate:'',
             bookedTillDate: '',
-            bookingDescription:'',
-            totalCost:'',
-            distance:'',
         }
         this.changeBookingDateHandler=this.changeBookingDateHandler.bind(this);
         this.changeBookedTillDateHandler=this.changeBookedTillDateHandler.bind(this);
-        this.changeBookingDescriptionHandler=this.changeBookingDescriptionHandler.bind(this);
-        this.changeBookingTotalCostHandler=this.changeBookingTotalCostHandler.bind(this);
-        this.changeBookingDistanceHandler=this.changeBookingDistanceHandler.bind(this);
         this.saveBooking=this.saveBooking.bind(this);
         this.changeBookingIdHandler=this.changeBookingIdHandler.bind(this);
     }
@@ -45,21 +39,6 @@ class AddBooking extends Component {
         this.setState({bookedTillDate: event.target.value})
     }
 
-    changeBookingDescriptionHandler=(event) =>{
-        this.setState({bookingDescription: event.target.value})
-    }
-
-    changeBookingTotalCostHandler=(event) =>{
-        this.setState({bookingDescription: event.target.value})
-    } 
-
-    changeBookingDistanceHandler=(event) =>{
-        this.setState({distance: event.target.value})
-    }
-
-    changeBookingTotalCostHandler=(event) =>{
-        this.setState({totalCost: event.target.value})
-    }
     cancel(){
         this.props.history.push('/');
     }
@@ -85,18 +64,8 @@ class AddBooking extends Component {
                                         <label>Booked Till Date:</label>
                                         <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler}/>
                                     </div>
-                                    <div className="form-group">
-                                        <label>Booking Description</label>
-                                        <input placeholder="BookingDescription" name="BookingDescription" className="form-control" value={this.state.bookingDescription} onChange={this.changeBookingDescriptionHandler}/>
-                                    </div>
-                                    <div className="form-group">
-                                        <label>Distance:</label>
-                                        <input placeholder="Distance" name="BookingDistance" className="form-control" value={this.state.distance} onChange={this.changeBookingDistanceHandler}/>
-                                    </div>
-                                    <div className="form-group">
-                                        <label>TotalCost:</label>
-                                        <input placeholder="Total Cost" name="Total Cost" className="form-control" value={this.state.totalCost} onChange={this.changeBookingTotalCostHandler}/>
-                                    </div>
+                                   
+                                   
                                     <button className="btn btn-success" onClick={this.saveBooking}> Save</button>
                                     <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
@@ -112,4 +81,4 @@ class AddBooking extends Component {
     }
 }
  
-export default AddBooking;
+export default AdBooking;

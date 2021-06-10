@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter} from 'react-router-dom';
+import './CustomCSS/bookingcss.css'; 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

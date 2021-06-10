@@ -1,0 +1,4 @@
+export const actionTypes={
+    SET_BOOKINGS:"SET_BOOKINGS",
+    BOOKED_BOOKINGS:"BOOKED_BOOKINGS"
+}
