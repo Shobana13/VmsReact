@@ -8,6 +8,8 @@ import { createStore } from 'redux';
 import allReducers from './reducer/index';
 import { Provider } from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
+import './CustomCSS/paymentcss.css';
+//import 'bootstrap/dist/js/bootstrap.js';
 
 // Create store
 
