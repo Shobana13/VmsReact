@@ -18,6 +18,9 @@ class CustomerService{
         async updateCustomer(customer,customerId){
             return await axios.put(CUSTOMER_API_BASE_URL + '/update/' + customerId,customer);
           }
+        async getCustomerByFirstName(firstName){
+            return await axios.get(CUSTOMER_API_BASE_URL + '/name/' +firstName);
+          }
     
 }
 export default new CustomerService();

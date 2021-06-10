@@ -6,12 +6,14 @@ class Address extends Component {
         super(props)
         
         this.state = {  
+            
+            search:"",
             addresses:[]
         }
         
         this.addAddress=this.addAddress.bind(this);
         this.deleteAddress = this.deleteAddress.bind(this);
-       // this.viewAddress = this.viewAddress.bind(this);
+        this.viewAddress = this.viewAddress.bind(this);
         this.updateAddress=this.updateAddress.bind(this);
 
     }
@@ -21,6 +23,10 @@ class Address extends Component {
 
     updateAddress(addressId){
         this.props.history.push(`/update-address/${addressId}`);
+    }
+
+    viewAddress (addressId){
+        this.props.history.push(`/view-address/${addressId}`);
     }
 
 
@@ -35,14 +41,36 @@ class Address extends Component {
         this.setState({addresses: res.data});
         });
     }
+    
+    viewAddressById =() =>{
+        let addresss=[];
+        AddressService.getAddressById(this.state.search).then((res)=>{
+          console.log("**data: ", res.data);
+          addresss=res.data;
+          this.setState({ addresss });
+        });
+        
+        console.log("**viewAddress" + this.state.addresss);
+      };
+      onChange=(event)=>{
+        console.log(event.target.value);
+        this.setState({ search: event.target.value });
+      };
+    
   
     render() { 
-        return ( 
+       return ( 
             <div>
              <h2  className="text-center">Address List</h2>
              <div className="row">
                  <button className="btn btn-info" onClick={this.addAddress}>Add Address</button>
              </div>
+             
+                <form className="form-inline my-2 my-lg-0">
+                    <input
+                    className="form-control ml-auto" type="search" placeholder="search by Id" aria-label="search"onChange={this.onChange}/>
+                    <button className="btn btn-outline-success my-2 my-sm-0" type="button" onClick={this.viewAddressById}> Search</button> 
+                </form>
                 <div className="row">
                     <table className="table table-striped table-bordered"> 
                     <thead>
@@ -61,11 +89,14 @@ class Address extends Component {
                                     <td>{address.streetName}</td>
                                     <td>
                                         <button onClick = { () => this.deleteAddress(address.addressId)} className="btn btn-danger">Delete</button>
-                                        <button  style={{marginLeft:"10px"}} onClick = { () => this.updateAddress(address.addressIdId)} className="btn btn-warning">Update</button>
+                                        <button  style={{marginLeft:"10px"}} onClick = { () => this.updateAddress(address.addressId)} className="btn btn-warning">Update</button>
+                                        <button style={{marginLeft:"10px"}} onClick = { () => this.viewAddress(address.addressId)} className="btn btn-primary">View</button>
                                     </td>
                                   
                                 </tr>
+                                
                             )
+                        
                         }
                     </tbody>
                     </table>

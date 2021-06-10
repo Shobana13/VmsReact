@@ -1,56 +1,58 @@
 import React, { Component } from 'react';
 import AddressService from '../services/addressService';
+
 class UpdateAddress extends Component {
+
     constructor(props){
         super(props)
         this.state = {
             addressId:this.props.match.params.addressId,
             city:'',
             streetName: ''
+
         }
         this.changeStreetNameHandler=this.changeStreetNameHandler.bind(this);
         this.changeCityHandler=this.changeCityHandler.bind(this);
         this.updateAddress=this.updateAddress.bind(this);
         
+      
     }
 
     componentDidMount(){
-        AddressService.getAddressById(this.state.addressId).then((res) =>{
-            let address=res.data;
-            this.setState({streetName:address.streetName,
-                city:address.city
+            AddressService.getAddressById(this.state.addressId).then((res) =>{
+                let address=res.data;
+                this.setState({streetName:address.streetName,
+                    city:address.city
+                });
             });
-        });
-    }
+        }
 
-    updateAddress = (e) => {
-        e.preventDefault();
-        let address={streetName: this.state.streetName, city: this.state.city};
-        console.log('address => '+ JSON.stringify(address));
-
-        AddressService.updateAddress(address,this.state.addressId).then(res => {
-            this.props.history.push(`/address`);
-        });
-
-    }
-
+        updateAddress = (e) => {
+            e.preventDefault();
+            let address={streetName:this.state.streetName, city: this.state.city};
+            console.log('address => '+ JSON.stringify(address));
     
+            AddressService.updateAddress(this.state.addressId,address).then(res => {
+                this.props.history.push(`/address`);
+            });
+    
+        }
 
-    changeStreetNameHandler=(event) =>{
-        this.setState({streetName: event.target.value})
-    }
+   
+        changeStreetNameHandler=(event) =>{
+            this.setState({streetName: event.target.value})
+        }
+    
+        changeCityHandler=(event) =>{
+            this.setState({city: event.target.value})
+        }
+    
+        cancel(){
+            this.props.history.push('/address');
+        }
 
-    changeCityHandler=(event) =>{
-        this.setState({city: event.target.value})
-    }
 
-    cancel(){
-        this.props.history.push('/address');
-    }
-
-
-
-    render() { 
+    render(){
         return (  
             <div>
                 <div className="container">

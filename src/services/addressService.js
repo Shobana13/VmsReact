@@ -15,7 +15,7 @@ class AddressService{
         async createAddress(address){
             return await axios.post(ADDRESS_API_BASE_URL,address);
           }
-        async updateAddress(address,addressId){
+        async updateAddress(addressId,address){
             return await axios.put(ADDRESS_API_BASE_URL + '/update/' + addressId,address);
           }
     
