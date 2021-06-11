@@ -35,7 +35,7 @@ class UpdatePayment extends Component {
         console.log('payment => '+ JSON.stringify(payment));
 
         PaymentService.updatePaymentStatus(payment, this.state.paymentId).then((res) => {
-              this.props.history.push(`/`);
+              this.props.history.push(`/payment`);
         });
 
     }
@@ -58,7 +58,7 @@ class UpdatePayment extends Component {
     }
 
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/payment');
     }
 
     render() { 

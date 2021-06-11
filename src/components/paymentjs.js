@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NavBar from "./NavBar";
+import Navbar from "../components/homepage/navbar";
 
 export default class Paymentjs extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ export default class Paymentjs extends Component {
     render() {
         return (
             <div>
-                <NavBar />
+                <Navbar />
 
                 <div class="body2">
 

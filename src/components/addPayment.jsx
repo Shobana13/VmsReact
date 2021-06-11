@@ -24,7 +24,7 @@ class AddPayment extends Component {
         console.log('payment => '+ JSON.stringify(payment));
 
         PaymentService.addPayment(payment).then((res) => {
-              this.props.history.push(`/`);
+              this.props.history.push(`/payment`);
         });
 
     }
@@ -46,7 +46,7 @@ class AddPayment extends Component {
     }
 
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/payment');
     }
     
     render() { 

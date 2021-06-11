@@ -28,7 +28,7 @@ class AddBooking extends Component {
         console.log('booking => '+ JSON.stringify(booking));
 
         BookingService.addBooking(booking).then((res) => {
-              this.props.history.push(`/`);
+              this.props.history.push(`/booking`);
         });
 
     }
@@ -61,7 +61,7 @@ class AddBooking extends Component {
         this.setState({totalCost: event.target.value})
     }
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/booking');
     }
     
     render() { 

@@ -33,7 +33,7 @@ class AddVehicle extends Component {
         console.log('vehicle => '+ JSON.stringify(vehicle));
 
         VehicleService.addVehicle(vehicle).then(res => {
-            this.props.history.push(`/`);
+            this.props.history.push(`/vehicle`);
         });
 
     }
@@ -71,7 +71,7 @@ class AddVehicle extends Component {
 
 
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/vehicle');
     }
 
 

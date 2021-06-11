@@ -41,7 +41,7 @@ class UpdateBooking extends Component {
         console.log('booking => '+ JSON.stringify(booking));
 
         BookingService.updateBookingDate(this.state.bookingId,booking).then((res) => {
-              this.props.history.push(`/`);
+              this.props.history.push(`/booking`);
         });
 
     }
@@ -72,7 +72,7 @@ class UpdateBooking extends Component {
     }
 
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/booking');
     }
 
     render() { 

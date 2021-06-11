@@ -17,15 +17,8 @@ function Register({registerUser}) {
     e.preventDefault();
     console.log(user);
     registerUser(user)
-    history.push("/")
+    history.push("/login")
   };
-  // const postCustomer = async(user)=>{
-  //   const res= await axios.post("http://localhost:8080/customer",user)
-  //   console.log(res);
-  //   if(res.status===200){
-  //   history.push('/');
-  //   }
-  // }
 
   return (
     <div class="body">

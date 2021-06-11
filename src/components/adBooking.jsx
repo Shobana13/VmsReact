@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 //import booking_reducer from "../../reducers/booking_Reducer";
 //import booking_Types from "../../BookingService/booking_Types";
 import BookingService from '../services/bookingService';
-import NavBar from '../components/NavBar copy';
+import Navbar from '../components/homepage/navbar';
 
 
 //const { useEffect } = React;
@@ -33,7 +33,7 @@ class AdBooking extends Component {
         console.log('booking => '+ JSON.stringify(booking));
 
         BookingService.addBooking(booking).then((res) => {
-              this.props.history.push(`/`);
+              this.props.history.push(`/booking`);
         });
 
     }
@@ -51,13 +51,13 @@ class AdBooking extends Component {
     }
 
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/booking');
     }
     
     render() { 
         return (  
             <div>
-                <NavBar/>
+                <Navbar/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

@@ -82,7 +82,7 @@ class UpdateDriver extends Component {
     }
 
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/driver');
     }
 
 
