@@ -1,4 +1,4 @@
-/*footer*/
+/*footer/
 
 /* .foot {
   position: fixed;
@@ -15,7 +15,7 @@
   }
   footer {
     width: 100%;
-    background-color: hsl(202, 85%, 3%);
+    background-color: #050708;
     min-height: 250px;
     padding: 10px 0px 25px 0px;
     /* margin-top: 40px; */
@@ -122,4 +122,12 @@
   }
   
   
-  
+  h4{
+    background-color: red;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 900;
+  }
