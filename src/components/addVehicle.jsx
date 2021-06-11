@@ -11,7 +11,8 @@ class AddVehicle extends Component {
             location:'',
             capacity:'',
             chargesPerKM:'',
-            fixedCharges:''  
+            fixedCharges:'',
+            imageDir:'',  
 
         }
         this.changeVehicleNumberHandler=this.changeVehicleNumberHandler.bind(this);
@@ -22,12 +23,13 @@ class AddVehicle extends Component {
         this.changeCapacityHandler=this.changeCapacityHandler.bind(this);
         this.changeChargesPerKMHandler=this.changeChargesPerKMHandler.bind(this);
         this.changeFixedChargesHandler=this.changeFixedChargesHandler.bind(this);
+        this.changeImageDirHandler=this.changeImageDirHandler.bind(this);
         this.saveVehicle=this.saveVehicle.bind(this);
     }
 
     saveVehicle = (e) => {
         e.preventDefault();
-        let vehicle={vehicleNumber: this.state.vehicleNumber, type: this.state.type,category: this.state.category,location: this.state.location,capacity: this.state.capacity,description: this.state.description,chargesPerKM: this.state.chargesPerKM,fixedCharges: this.state.fixedCharges};
+        let vehicle={vehicleNumber: this.state.vehicleNumber, type: this.state.type,category: this.state.category,location: this.state.location,capacity: this.state.capacity,description: this.state.description,chargesPerKM: this.state.chargesPerKM,fixedCharges: this.state.fixedCharges,imageDir: this.state.imageDir};
         console.log('vehicle => '+ JSON.stringify(vehicle));
 
         VehicleService.addVehicle(vehicle).then(res => {
@@ -62,6 +64,9 @@ class AddVehicle extends Component {
     }
     changeFixedChargesHandler=(event) =>{
         this.setState({fixedCharges: event.target.value})
+    }
+    changeImageDirHandler=(event) =>{
+        this.setState({imageDir: event.target.value})
     }
 
 
@@ -111,6 +116,10 @@ class AddVehicle extends Component {
                                     <div className="form-group text-left">
                                         <label>FixedCharges:</label>
                                         <input placeholder="FixedCharges" name="FixedCharges" className="form-control" value={this.state.fixedCharges} onChange={this.changeFixedChargesHandler}/>
+                                    </div>
+                                    <div className="form-group text-left">
+                                        <label>ImageDir:</label>
+                                        <input placeholder="ImageDir" name="ImageDir" className="form-control" value={this.state.imageDir} onChange={this.changeImageDirHandler}/>
                                     </div>
                                     <button className="btn btn-success float-right" onClick={this.saveVehicle}> Save</button>
                                     <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
