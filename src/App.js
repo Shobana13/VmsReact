@@ -35,9 +35,6 @@ if(localStorage.getItem('emailId')){
   emailId=localStorage.getItem('emailId')
   console.log(emailId)
 }
-
-
-
 function App() {
   return (
     <Router><div className="container">
