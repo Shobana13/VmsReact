@@ -5,6 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import { createStore} from 'redux';
+import allReducers from './reducers/index';
+import { Provider } from 'react-redux';
+import {BrowserRouter} from 'react-router-dom';
+//import thunk from "redux-thunk";
+import store from './redux/store';
+import './CustomCSS/logincss.css';
+import './CustomCSS/vehiclecss.css';
+
 //import $ from 'jquery';
 //import Popper from 'popper.js';
 //import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -17,9 +26,9 @@ import "bootstrap/dist/css/bootstrap.css";
 // Use Provider to hook store to app
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+ <Provider store={store}>
+ <App />
+ </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 ); 
