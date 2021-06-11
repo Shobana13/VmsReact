@@ -5,7 +5,7 @@ import {
     ShieldCheck,
     CashCoin,
   } from "react-bootstrap-icons";
-import v14 from '../../images/v14.jpg'
+import v14 from '../../images/v14.jpg';
 import v15 from '../../images/v15.jpg'
 import v16 from '../../images/v16.jpg'
 class Card extends Component {
