@@ -67,7 +67,6 @@ function App() {
                <Route path="/add-vehicle" component = {AddVehicle}></Route>
                <Route path ="/view-vehicle/:vehicleId" component ={ViewVehicle}></Route>
                <Route path="/update-vehicles/:vehicleId" component = {Update}></Route>
-               <Route path ="/driver" exact component={Driver}></Route>
                <Route path="/add-driver" component = {AddDriver}></Route>
                <Route path ="/view-driver/:driverId" component ={ViewDriver}></Route>
                <Route exact path='/login' component={Login}/>

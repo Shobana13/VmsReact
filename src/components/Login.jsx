@@ -10,14 +10,14 @@ const history= useHistory();
   const [loginDetails, setLoginDetails] = useState({
     emailId: "",
     password: "",
-    userRole:"",
+    //userRole:"",
   });
 
   const submitHandler = async(e) => {
     e.preventDefault();
     // loginUser(loginDetails);
  loginUser(loginDetails)
- if(loginDetails.userRole==="Admin"&& loginDetails){
+ if(loginDetails.emailId==="admin123@gmail.com" && loginDetails.password==="admin"){
              
   history.push(`/driver`);
    }
@@ -66,7 +66,7 @@ const history= useHistory();
             value={loginDetails.password}
           />
         </div>
-        <div class="mb-3 mt-2">
+        {/*<div class="mb-3 mt-2">
           <label for="userRole" class="form-label">
             {" "}
             <h2>UserRole</h2>
@@ -82,7 +82,7 @@ const history= useHistory();
             <option>Admin</option>
             <option>Customer</option>
           </select>
-        </div>
+          </div>*/}
         
         <div className="mt-2">
       
