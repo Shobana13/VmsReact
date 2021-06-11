@@ -42,7 +42,7 @@ class Update extends Component {
         console.log('vehicle => '+ JSON.stringify(vehicle));
 
         VehicleService.update(this.state.vehicleId,vehicle).then((res) => {
-              this.props.history.push(`/`);
+              this.props.history.push(`/vehicle`);
         });
 
     }
@@ -82,7 +82,7 @@ class Update extends Component {
 
 
     cancel(){
-        this.props.history.push('/');
+        this.props.history.push('/vehicle');
     }
 
 

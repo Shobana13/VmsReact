@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setdrivers } from "../actions/driver-actions";
 import driver_reducer from "../reducers/driver_reducer";
 import driver_Types from "../services/driver_Types";
-import NavBar from "./NavBar";
+import Navbar from "../components/homepage/navbar";
 
 
 const { useEffect } = React;
@@ -29,7 +29,7 @@ function DriverHome() {
 
     return (
         <div>
-            <NavBar/>
+            <Navbar/>
                     <Container style={{ marginTop: "51px" }}>
                         <Row xs={1} md={3} className="g-4">
                             {drivers.length &&

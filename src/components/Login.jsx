@@ -19,10 +19,10 @@ const history= useHistory();
  loginUser(loginDetails)
  if(loginDetails.emailId==="admin123@gmail.com" && loginDetails.password==="admin"){
              
-  history.push(`/driver`);
+  history.push(`/admin-components`);
    }
    else {
-       history.push(`/vehicleHome`);
+       history.push(`/`);
 
    }
 

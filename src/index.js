@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 //import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import { createStore} from 'redux';
-import allReducers from './reducers/index';
+//import allReducers from './reducers/index';
 import { Provider } from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 //import thunk from "redux-thunk";
