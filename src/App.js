@@ -30,6 +30,13 @@ import Footer from './components/Footer';
 import {loadUser} from './actions/userActions'
 import {useEffect} from 'react'
 import { Container } from 'react-bootstrap';
+import Payment from './components/payment';
+import ViewPayment from './components/viewPayment';
+import UpdatePayment from './components/updatePayment';
+import AddPayment from './components/addPayment';
+import Payments from "./components/payments";
+import Paymentjs from "./components/paymentjs";
+
 let emailId
 if(localStorage.getItem('emailId')){
   emailId=localStorage.getItem('emailId')
@@ -44,6 +51,7 @@ function App() {
     <div className="App">
     <Route path ="/" exact component={Vehicle}></Route>
     <Route path ="/driver" exact component={Driver}></Route>
+    <Route path="/" exact component={Payment}></Route> 
     </div>
     </div>
       
@@ -73,6 +81,11 @@ function App() {
                <Route exact path='/login' component={Login}/>
                <Route exact path='/register' component={Register}/>
                <Route path="/update-drivers/:driverId" component = {UpdateDriver}></Route>
+
+                   <Route path="/add-payment" component={AddPayment}></Route>          
+                   <Route path="/view-payment/:paymentId" component={ViewPayment}></Route>
+                   <Route path="/update-payment/:paymentId" component={UpdatePayment}></Route>
+                   <Route path="/makepayment" component={Paymentjs}></Route>
            </div>
          </Switch>
          <br/>
