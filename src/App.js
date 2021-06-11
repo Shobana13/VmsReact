@@ -13,7 +13,7 @@ import VehicleHomePage from './components/homepage/vehicleHomepage';
 import AdminHome from './components/adminComponent/adminHome';
 import NavBar from './components/NavBar';
 import Vehicle from './components/vehicle';
-import{BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+//import{BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import AddVehicle from './components/addVehicle';
 import ViewVehicle from './components/viewVehicle';
 import Update from './components/update';
