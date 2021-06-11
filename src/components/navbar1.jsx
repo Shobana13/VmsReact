@@ -10,8 +10,8 @@ function Navbar({ logoutUser }) {
   // let email =  useSelector((state)=>state.user.user.email)
 
   const handleSubmit = () => {
-    let email = user.email;
-    logoutUser(email);
+    let emailId= user.emailId;
+    logoutUser(emailId);
   };
 
   return (

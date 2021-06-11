@@ -1,5 +1,7 @@
-import React from "react";
+//import React from "react";
+import React,{ Component }from "react";
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
+import VehicleService from "../services/vehicleService";
 import { useSelector, useDispatch } from "react-redux";
 import { setvehicles } from "../actions/vehicle-actions";
 import vehicle_reducer from "../reducers/vehicle_reducer";
@@ -26,6 +28,9 @@ function VehicleHome() {
         getVehicleList();
     }, []);
     console.log(vehicles);
+
+
+   
 
     return (
         <div>
@@ -58,5 +63,5 @@ function VehicleHome() {
                 </div>
   );
 }
-
+                            
 export default VehicleHome;

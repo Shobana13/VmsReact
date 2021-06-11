@@ -10,7 +10,7 @@ class Vehicle extends Component{
         super(props)
         this.state={
             vehicles:[],
-            search:''
+            //search:''
         }
         this.addVehicle=this.addVehicle.bind(this);
         this.update=this.update.bind(this);
@@ -35,14 +35,14 @@ class Vehicle extends Component{
             this.setState({ vehicles });
             VehicleService.deleteVehicleById (vehicleId);
           };
-          getVehicleByLocation = () => {
-            let vehicles = [];
-            VehicleService.getVehicleByLocation(this.state.search).then((res) => {
-                vehicles = res.data;
-                this.setState({ vehicles });
-                console.log(this.state.vehicles);
-            });
-        }
+         // getVehicleByLocation = () => {
+          //  let vehicles = [];
+           // VehicleService.getVehicleByLocation(this.state.search).then((res) => {
+               // vehicles = res.data;
+               // this.setState({ vehicles });
+               // console.log(this.state.vehicles);
+           // });
+       // }
     
         onChange = (event) => {
             console.log(event.target.value);
@@ -60,22 +60,7 @@ componentDidMount() {
       return(
         <div>
             <Navbar1/>
-        <form className="form-inline my-2 my-lg-0">
-            <input
-                className="form-control ml-auto"
-                type="search"
-                name="name"
-                placeholder="Search by location"
-                aria-label="Search"
-                onChange={this.onChange}
-            />
-            <button
-                className="btn btn-outline-success my-2 my-sm-0"
-                type="button"
-                onClick={this.getVehicleByLocation}
-            >Search
-      </button>
-        </form>
+         
       <h1 className="text-center">Vehicles List</h1>
       <div className="row">
                 <button className="btn-right btn-info btn-lg mb-3" onClick={this.addVehicle}>Add Vehicle</button>
@@ -92,6 +77,7 @@ componentDidMount() {
                             <th>Capacity</th>
                             <th>ChargesPerKm</th>
                             <th>Fixedcharges</th>
+                            <th>ImageDir</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -108,6 +94,7 @@ componentDidMount() {
                                     <td>{vehicle.capacity}</td>
                                     <td>{vehicle.chargesPerKM}</td>
                                     <td>{vehicle.fixedCharges}</td>
+                                    <td>{vehicle.imageDir}</td>
                                     <td>
                                     <td>
                                     <button style={{marginLeft:"10px"}} onClick = { () => this.update(vehicle.vehicleId)} className="btn btn-success float-right">Update</button>
@@ -131,3 +118,19 @@ componentDidMount() {
 }
 }
 export default Vehicle; 
+/*<form className="form-inline my-2 my-lg-0">
+            <input
+                className="form-control ml-auto"
+                type="search"
+                name="name"
+                placeholder="Search by location"
+                aria-label="Search"
+                onChange={this.onChange}
+            />
+            <button
+                className="btn btn-outline-success my-2 my-sm-0"
+                type="button"
+                onClick={this.getVehicleByLocation}
+            >Search
+      </button>
+        </form>*/
