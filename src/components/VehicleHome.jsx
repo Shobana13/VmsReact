@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setvehicles } from "../actions/vehicle-actions";
 import vehicle_reducer from "../reducers/vehicle_reducer";
 import vehicle_Types from "../services/vehicle_Types";
-import Navbar from "../components/homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 
 const { useEffect } = React;
@@ -34,7 +34,7 @@ function VehicleHome() {
 
     return (
         <div>
-             <Navbar/>
+             <NavBar/>
                     <Container style={{ marginTop: "51px" }}>
                         <Row xs={1} md={3} className="g-4">
                             {vehicles.length &&

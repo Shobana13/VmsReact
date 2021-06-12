@@ -26,18 +26,23 @@ class AdminHome extends React.Component {
               </Link>
             </li>
             <li>
-              <Link to="/Vehicle">
+              <Link to="/vehicle">
                    Vehicle
               </Link>
             </li>
             <li>
-              <Link to="/Driver">
+              <Link to="/driver">
                    Driver
               </Link>
             </li>
             <li>
-              <Link to="/Booking">
+              <Link to="/booking">
                    Booking
+              </Link>
+            </li>
+            <li>
+              <Link to="/payment">
+                   Payment
               </Link>
             </li>
             

@@ -48,19 +48,14 @@ if (localStorage.getItem('emailId')) {
 }
 function App() {
   return (
-    <Router><div className="container">
-      <div className="App">
+    <Router>
+      <Switch>
+        <Route path="/" exact component={VehicleHomePage}></Route>
+        <Route path="/customers" component={Customer}></Route>
         <Route path="/vehicle" exact component={Vehicle}></Route>
         <Route path="/driver" exact component={Driver}></Route>
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
-      </div>
-    </div>
-
-      <Switch>
-        <Route path="/" exact component={VehicleHomePage}></Route>
-        <div className="container">
-          <Route path="/customers" component={Customer}></Route>
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
@@ -92,12 +87,10 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
-        </div>
+       
+  
       </Switch>
-      <br />
-      <br />
-
-    </Router>
+     </Router>
 
   );
 }

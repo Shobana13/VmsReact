@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CustomerService from '../services/customerService'
+import Navbar from './homepage/navbar';
 
 
 
@@ -12,8 +13,8 @@ class Customer extends Component {
 
             customers: [],
             search: '',
-           
-    };
+
+        };
 
         //this.updateCustomer = this.updateCustomer.bind(this);
         this.addCustomer = this.addCustomer.bind(this);
@@ -22,8 +23,8 @@ class Customer extends Component {
         this.updateCustomer = this.updateCustomer.bind(this);
 
     }
-    
-  
+
+
 
     addCustomer() {
         this.props.history.push('/add-customer');
@@ -75,7 +76,10 @@ class Customer extends Component {
 
         return (
             <div>
-                
+                <Navbar />
+                <br />
+                <br />
+
                 <form className="form-inline my-2 my-lg-0">
                     <input
                         className="form-control ml-auto"
@@ -91,42 +95,43 @@ class Customer extends Component {
                         onClick={this.getCustomerByFirstName}
                     >Search</button>
                 </form>
+                <div className="container">
+                    <h2 className="text-center">Customers List</h2>
+                    <div className="row">
+                        <button className="btn btn-info" onClick={this.addCustomer}>Add Customer</button>
+                    </div>
+                    <div className="row">
+                        <table className="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Customer First Name</th>
+                                    <th>Customer Last Name</th>
+                                    <th>Customer Email Id</th>
+                                    <th>Customer Mobile Number</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    this.state.customers.map(
+                                        customer =>
+                                            <tr key={customer.customerId}>
+                                                <td>{customer.firstName}</td>
+                                                <td>{customer.lastName}</td>
+                                                <td>{customer.emailId}</td>
+                                                <td>{customer.mobileNumber}</td>
+                                                <td>
+                                                    <button onClick={() => this.deleteCustomer(customer.customerId)} className="btn btn-danger">Delete</button>
+                                                    <button style={{ marginLeft: "10px" }} onClick={() => this.viewCustomer(customer.customerId)} className="btn btn-primary">View</button>
+                                                    <button style={{ marginLeft: "10px" }} onClick={() => this.updateCustomer(customer.customerId)} className="btn btn-warning">Update</button>
 
-                <h2 className="text-center">Customers List</h2>
-                <div className="row">
-                    <button className="btn btn-info" onClick={this.addCustomer}>Add Customer</button>
-                </div>
-                <div className="row">
-                    <table className="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Customer First Name</th>
-                                <th>Customer Last Name</th>
-                                <th>Customer Email Id</th>
-                                <th>Customer Mobile Number</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                this.state.customers.map(
-                                    customer =>
-                                        <tr key={customer.customerId}>
-                                            <td>{customer.firstName}</td>
-                                            <td>{customer.lastName}</td>
-                                            <td>{customer.emailId}</td>
-                                            <td>{customer.mobileNumber}</td>
-                                            <td>
-                                                <button onClick={() => this.deleteCustomer(customer.customerId)} className="btn btn-danger">Delete</button>
-                                                <button style={{ marginLeft: "10px" }} onClick={() => this.viewCustomer(customer.customerId)} className="btn btn-primary">View</button>
-                                                <button style={{ marginLeft: "10px" }} onClick={() => this.updateCustomer(customer.customerId)} className="btn btn-warning">Update</button>
-
-                                            </td>
-                                         </tr>
-                                )
-                            }
-                        </tbody>
-                    </table>
+                                                </td>
+                                            </tr>
+                                    )
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         );

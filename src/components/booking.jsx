@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BookingService from "../services/bookingService";
+import Navbar from "./homepage/navbar";
 
 class Booking extends Component {
     constructor(props) {
@@ -47,6 +48,8 @@ state = {
     render() {
         return (
             <div>
+                <Navbar/>
+                <div className="container">
                 <h2 className="text-center">Booking List</h2>
                 <div className="row">
                     <button style={{marginDown:"5px"}} className="btn-right btn-info btn-lg mb-3" onClick={this.addBooking}>Add Booking</button>
@@ -87,6 +90,7 @@ state = {
                     </table>
                 </div>
             </div>
+        </div>
         );
     }
 

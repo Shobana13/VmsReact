@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PaymentService from "../services/paymentService";
+import Navbar from "./homepage/navbar";
 
 class Payment extends Component {
     constructor(props){
@@ -56,6 +57,9 @@ class Payment extends Component {
         
         return (
             <div>
+            <Navbar/>
+            <div className="container">
+
                 <h2 className="text-center">Payment List</h2>
                 <div className="row">
                     <button style={{marginDown:"5px"}} className="btn-right btn-info btn-lg mb-3" onClick={this.addPayment}>Add Payment</button>
@@ -93,6 +97,7 @@ class Payment extends Component {
                     </table>
                 </div>
             </div>
+        </div>
         );
     }
 

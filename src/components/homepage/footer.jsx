@@ -16,7 +16,7 @@ export default class Footer extends Component {
     return (
       <div>
         
-        <footer className="footer foot">
+        <footer className="footer foot" style={{height:"100%"}}>
           <div className="container bottom_border">
             <div className="row">
               <div className=" col-sm-4 col-md col-sm-4  col-12 col">
@@ -86,22 +86,22 @@ export default class Footer extends Component {
                 <ul className="footer_ul2_amrc">
                   <li className="ll">
                     <a href="#">
-                      <Twitter /><br/> https://twitter.com/RentalsRides
+                      <Twitter /><br/> https://twitter.com/RRides
                     </a>
                   </li>
                   <li className="ll">
                     <a href="#">
-                     <Facebook/> https://facebook.com/RentalsRides
+                     <Facebook/> https://facebook.com/RRides
                     </a>
                   </li>
                   <li className="ll">
                     <a href="#">
-                      <Instagram/>https://instagram.com/RentalsRides
+                      <Instagram/>https://instagram.com/RRides
                     </a>
                   </li>
                   <li className="ll">
                     <a href="#">
-                      <Youtube />https://youtube.com/RentalsRides
+                      <Youtube />https://youtube.com/RRides
                     </a>
                   </li>
                   <li className="ll">

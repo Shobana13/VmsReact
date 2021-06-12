@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DriverService from "../services/driverService";
-import Navbar1 from "./navbar1";
+import Navbar from "./homepage/navbar";
 
 
 class Driver extends Component {
@@ -58,7 +58,10 @@ class Driver extends Component {
     render() {
         return (
             <div>
-                <Navbar1/>
+                <Navbar/>
+                <br/>
+                <br/>
+                <div className="container">
                 <form className="form-inline my-2 my-lg-0">
                     <input
                         className="form-control ml-auto"
@@ -123,6 +126,7 @@ class Driver extends Component {
                     </table>
                 </div>
             </div>
+        </div>
         );
     }
 }

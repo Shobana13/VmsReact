@@ -65,7 +65,7 @@ function Navbar({ logoutUser }) {
                   </form>
                 </div>
 
-                <div className="col-lg-2 col-xl-3  col-sm-8 col-md-4 col-7">
+                <div className="col-lg-1 col-xl-3  col-sm-8 col-md-4 col-7">
                   <div className="d-flex justify-content-end">
                     <button className="btt">
                       {" "}

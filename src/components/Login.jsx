@@ -1,8 +1,10 @@
 import React from "react";
 import axios from 'axios'
+import Navbar from "./homepage/navbar";
 import { connect } from "react-redux";
 import {  useHistory } from "react-router";
 import { loginUser } from "../actions/userActions";
+import Footer from "./homepage/footer";
 const { useState } = React;
 
 function Login({user,loginUser}) {
@@ -30,8 +32,9 @@ const history= useHistory();
 
   };
   return (
-    <div class="body">
-      
+    <div>
+    <Navbar/>
+    <div className="body">
     <div className="mt-5 ">
       <form onSubmit={submitHandler} style={{ width: "480px", margin: "auto" }}>
         <h2>Email Id</h2>
@@ -92,9 +95,10 @@ const history= useHistory();
       </form>
     </div>
     </div>
-
+  </div>
   );
 }
+
 const mapStateToProps = state => {
   return {
     user: state.user.user,
@@ -106,6 +110,8 @@ const mapStateToProps = state => {
 //     loginUser: () => dispatch(loginUser())
 //   }
 // }
+
+<Footer/>
 
 export default connect(
   mapStateToProps,
