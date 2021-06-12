@@ -41,21 +41,18 @@ function VehicleHome() {
                                 vehicles.map((vehicle) => (
                                     <Col key={vehicle.vehicleId}>
                                        <Card style={{ width: '18rem' }}>
-                                        <Card.Img variant="top"  src="https://images.outlookindia.com/public/uploads/articles/2018/12/10/car_1_20181210_571_855.jpg"/>
-                                            <Card.Body>
+                                        <Card.Img variant="top"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40N9O2NHxH2E7VUzg5Ipm91pA6cZIaTcDPw&usqp=CAU"/>
+                                            <Card.Body style={{backgroundColor: '#dfebe8'}}>
                                                 <img src={""} alt={vehicle.title} />
-                                                <Card.Title>{vehicle.vehicleNumber}</Card.Title>
-                                                <Card.Title>{vehicle.type}</Card.Title>
-                                                <Card.Text>{vehicle.category}</Card.Text>
-                                                <Card.Text>{vehicle.description}</Card.Text>
-                                                <Card.Text>{vehicle.location}</Card.Text>
-                                                <Card.Text>{vehicle.capacity}</Card.Text>
-                                                <Card.Text>{vehicle.chargesPerKm}</Card.Text>
-                                                <Card.Text>{vehicle.fixedCharges}</Card.Text>
+                                                <Card.Text><h3>Category:</h3>  {vehicle.category}</Card.Text>
+                                                <Card.Text><h3>Description:</h3> {vehicle.description}</Card.Text>
+                                                <Card.Text><h3>Capacity:</h3>{vehicle.capacity}</Card.Text>
+                                                <Card.Text><h3>VehicleNumber:</h3>   {vehicle.vehicleNumber}</Card.Text>
                                                 <Button variant="primary">Book Now</Button>
-                                            </Card.Body>
-                                        </Card>
+                                            </Card.Body >
+                                        </Card><br/><br/>
                                     </Col>
+                                   
 
                                 ))}
                         </Row>

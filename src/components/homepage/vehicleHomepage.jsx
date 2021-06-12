@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Footer from "./footer";
+//import Footer from "./footer";
 import Navbar from "./navbar";
 import Carousel from './carousel';
 import Icons from './icons'
@@ -26,8 +26,6 @@ class VehicleHomePage extends Component{
                 <Icons/>
                 <hr className="solid" sytle={{"border-top": "3px solid #bbb","margin-left":"5px"}}></hr>
                 <Carousel/>
-                <Footer />
-
             
             </div>
 

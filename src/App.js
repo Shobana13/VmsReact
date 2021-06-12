@@ -25,7 +25,7 @@ import Register from './components/Register';
 import VehicleHome from './components/VehicleHome';
 import DriverHome from './components/DriverHome';
 import VehicleDetails from './components/vehicleDetails';
-//import Footer from './footer';
+import Footer from './components/homepage/footer';
 import { loadUser } from './actions/userActions'
 import { useEffect } from 'react'
 import { Container } from 'react-bootstrap';
@@ -87,12 +87,14 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
-       
-  
+         
       </Switch>
+      <Footer/>
      </Router>
+         
 
   );
+  
 }
 
 export default App;

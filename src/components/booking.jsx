@@ -48,7 +48,7 @@ state = {
     render() {
         return (
             <div>
-                <Navbar/>
+                <Navbar/><br/><br/><br/><br/>
                 <div className="container">
                 <h2 className="text-center">Booking List</h2>
                 <div className="row">
