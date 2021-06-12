@@ -44,11 +44,12 @@
   
   .search-button {
   
-    background-color: #ffffff;
+    background-color:black;
     border-color: #ffffff;
     /* padding: 50px; */
     width: 70px;
   }
+  
   
   .navbar-main {
     background-color: #fff;
@@ -106,10 +107,7 @@
     background-image: url(https://img.icons8.com/ios/50/000000/menu.png);
   }
   
-  .nav-link {
-    text-transform: uppercase;
-    font-weight: 400;
-  }
+
   
   /* .vl {
     border-left: 1px solid #fff;
@@ -157,18 +155,13 @@
   /* } */
   .dropp {
     font-size: larger;
-    color:blueviolet;
+    color:white;
     padding-top: 4px;
     padding-right: 20px;
     border: none;
     /* margin-right: 20px; */
   }
-  .drop:hover {
-    background-color:black;
-    border-radius: 10px;
-    color: rgb(14, 12, 12);
-    /* border-radius: 0%; */
-  }
+  
   .indrop:hover{
     background-color: black;
   }
@@ -224,7 +217,7 @@
   }
   
   .box {
-    box-shadow: 0px 20px 20px 10px rgb(10, 10, 10);
+    
     border-bottom: 5px solid rgb(3, 3, 3);
   }
   

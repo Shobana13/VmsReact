@@ -39,7 +39,7 @@ class ViewCustomer extends Component {
                         <label><b>Customer Mobile No: </b></label>
                         <div>{this.state.customer.mobileNumber}</div>
                     </div>
-                        
+                    <a class="btn btn-primary" href="\customers" role="button">Back</a>    
                 </div>
 
                 </div>

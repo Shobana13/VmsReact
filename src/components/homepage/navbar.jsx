@@ -2,8 +2,9 @@ import React from "react";
 import {
   List,
   Key,
-  PersonCircle,
+  Person,
   Search,
+  PencilSquare,
 } from "react-bootstrap-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
@@ -65,15 +66,15 @@ function Navbar({ logoutUser }) {
                   </form>
                 </div>
 
-                <div className="col-lg-1 col-xl-3  col-sm-8 col-md-4 col-7">
+                <div className="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
                   <div className="d-flex justify-content-end">
                     <button className="btt">
-                      {" "}
-                      <div className="blink_me"style={{"fontFamily":"-moz-initial",'color':'white'}}><h4>Rentals</h4></div>
-                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {" "}
+                      <div className="blink_me"style={{'color':'white'}}><h4>Rentals</h4></div>
+                    </button>
                     <div className="dropdown drop">
                       <button 
-                        className="btn btn-dark dropdown-toggle dropp" type="button" data-toggle="dropdown"><List/></button>
+                        className="btn btn-dark dropdown-toggle dropp" type="button" data-toggle="dropdown" style={{marginTop:"5px"}}><List/></button>
                       <div
                         className="dropdown-menu">
                         <button className="btn dropdown-item indrop" type="button">
@@ -101,27 +102,34 @@ function Navbar({ logoutUser }) {
                         data-target="#login-modal"
                         data-abc="true"
                       >
-                        <span className="login" style={{"fontFamily":"-moz-initial"}}>
+                        <span className="login">
                           &nbsp;
-                          <Key />
-                          <h4 style={{'color':'white'}}><b>Booking</b></h4>
+                          <Key /> &nbsp;
+                          <h4 style={{'color':'white'}}>Booking</h4>
                         </span>
                       </a>
-                    </Link>&nbsp;&nbsp;&nbsp;
-                    <div style={{ display: "flex"  }}>
-        <Link
-          
-          className="nav-link"
+                    </Link>
+                    <div style={{ display: "flex"}}>
+        <Link 
+         className="nav-link cartLog"
           to="/Login"
         >
-          <h4 style={{'color':'white'}}>Login </h4>
+          <span className="login">
+                          &nbsp;
+                          <Person/>&nbsp;
+                          <h4 style={{'color':'white'}}>Login</h4>
+                        </span>
         </Link>
         <Link
           style={{ display: userIsLoggedIn ? "none" : "block" }}
-          className="nav-link"
+          className="nav-link cartLog"
           to="/Register"
         >
-          <h4 style={{'color':'white'}}>Register</h4>
+           <span className="login">
+                          &nbsp;
+                          <PencilSquare/>&nbsp;
+                          <h4 style={{'color':'white'}}>Register</h4>
+                        </span>
         </Link>
         <Link
           style={{ display: userIsLoggedIn ? "none" : "block" }}

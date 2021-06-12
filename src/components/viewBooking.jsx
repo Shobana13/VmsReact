@@ -50,6 +50,7 @@ class ViewBooking extends Component {
                     </div>
 
                 </div>
+                <a class="btn btn-primary" href="\booking" role="button">Back</a>    
 
                 </div>
             </div>
