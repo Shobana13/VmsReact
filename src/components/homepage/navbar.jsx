@@ -69,7 +69,7 @@ function Navbar({ logoutUser }) {
                   <div className="d-flex justify-content-end">
                     <button className="btt">
                       {" "}
-                      <div className="blink_me"style={{"fontFamily":"-moz-initial"}}>Rentals</div>
+                      <div className="blink_me"style={{"fontFamily":"-moz-initial",'color':'white'}}><h4>Rentals</h4></div>
                     </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div className="dropdown drop">
                       <button 
@@ -104,24 +104,24 @@ function Navbar({ logoutUser }) {
                         <span className="login" style={{"fontFamily":"-moz-initial"}}>
                           &nbsp;
                           <Key />
-                          <h4>Booking</h4>
+                          <h4 style={{'color':'white'}}><b>Booking</b></h4>
                         </span>
                       </a>
                     </Link>&nbsp;&nbsp;&nbsp;
-                    <div style={{ display: "flex" }}>
+                    <div style={{ display: "flex"  }}>
         <Link
-          style={{ display: userIsLoggedIn ? "none" : "block" }}
+          
           className="nav-link"
           to="/Login"
         >
-          <h4>Login</h4>
+          <h4 style={{'color':'white'}}>Login </h4>
         </Link>
         <Link
           style={{ display: userIsLoggedIn ? "none" : "block" }}
           className="nav-link"
           to="/Register"
         >
-          <h4>Register</h4>
+          <h4 style={{'color':'white'}}>Register</h4>
         </Link>
         <Link
           style={{ display: userIsLoggedIn ? "none" : "block" }}

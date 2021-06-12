@@ -60,6 +60,7 @@ componentDidMount() {
       return(
         <div>
             <Navbar1/>
+            <div className ="container">
          
       <h1 className="text-center">Vehicles List</h1>
       <div className="row">
@@ -77,7 +78,6 @@ componentDidMount() {
                             <th>Capacity</th>
                             <th>ChargesPerKm</th>
                             <th>Fixedcharges</th>
-                            <th>ImageDir</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -94,7 +94,6 @@ componentDidMount() {
                                     <td>{vehicle.capacity}</td>
                                     <td>{vehicle.chargesPerKM}</td>
                                     <td>{vehicle.fixedCharges}</td>
-                                    <td>{vehicle.imageDir}</td>
                                     <td>
                                     <td>
                                     <button style={{marginLeft:"10px"}} onClick = { () => this.update(vehicle.vehicleId)} className="btn btn-success float-right">Update</button>
@@ -112,7 +111,7 @@ componentDidMount() {
                     </tbody>
                     </table>
                 </div>
-
+                </div>
             </div>
       );
 }

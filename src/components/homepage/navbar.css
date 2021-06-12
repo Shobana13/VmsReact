@@ -5,7 +5,7 @@
     padding-top: 7px;
     padding-bottom: 7px;
     /* background-color: rgb(214, 78, 44); */
-    background-image: linear-gradient(20deg,black,black);
+    background-image: linear-gradient(20deg,black,royalblue);
     /* position: sticky; */
     /* top: 0%; */
   }
@@ -139,7 +139,7 @@
     font-size: 2.5rem;
   }
   .cartLog:hover {
-    background-color:royalblue;
+    background-color:rgb(9, 9, 10);
     color: black;
     border-radius: 10px;
   }
@@ -164,13 +164,13 @@
     /* margin-right: 20px; */
   }
   .drop:hover {
-    background-color:royalblue;
+    background-color:black;
     border-radius: 10px;
-    color: white;
+    color: rgb(14, 12, 12);
     /* border-radius: 0%; */
   }
   .indrop:hover{
-    background-color: royalblue;
+    background-color: black;
   }
 
   .headANDlogo {
@@ -224,8 +224,8 @@
   }
   
   .box {
-    box-shadow: 0px 20px 20px 10px grey;
-    border-bottom: 5px solid royalblue;
+    box-shadow: 0px 20px 20px 10px rgb(10, 10, 10);
+    border-bottom: 5px solid rgb(3, 3, 3);
   }
   
   img.vert-move {
