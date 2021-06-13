@@ -2,11 +2,15 @@ import { Link} from "react-router-dom";
 import React from "react";
 import "./adminHome.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar } from "react-bootstrap";
+
 
 class AdminHome extends React.Component {
   render() {
     return (
+    
       <div>
+        <Navbar/>
         <div class="sidebar-container sid">
           <div class="sidebar-logo">
             <h4>Online Vehicle Rental Management System</h4>
@@ -72,6 +76,7 @@ class AdminHome extends React.Component {
           </div>
         </div>
       </div>
+    
     );
   }
 }

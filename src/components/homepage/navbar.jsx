@@ -5,11 +5,13 @@ import {
   Person,
   Search,
   PencilSquare,
+  BoxArrowRight
 } from "react-bootstrap-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 import { connect, useSelector } from "react-redux";
 import { logoutUser } from "../../actions/userActions";
+
 
 import { Link } from "react-router-dom"; 
 
@@ -26,7 +28,9 @@ function Navbar({ logoutUser }) {
 
   
     return (
+    
       <div>
+        
         <header className="section-header hh">
           <section className="header-main border-bottom sec">
             <div className="container-fluid">
@@ -111,6 +115,7 @@ function Navbar({ logoutUser }) {
                     </Link>
                     <div style={{ display: "flex"}}>
         <Link 
+        style={{ display: userIsLoggedIn ? "none" : "block" }}
          className="nav-link cartLog"
           to="/Login"
         >
@@ -135,14 +140,16 @@ function Navbar({ logoutUser }) {
           style={{ display: userIsLoggedIn ? "none" : "block" }}
           className="text"
         >
-          <h4>{user && user.customerName}</h4>
+          <h4>{user && user.FirstName}</h4>
         </Link>
         <Link
           onClick={handleSubmit}
           style={{ display: userIsLoggedIn ? "block" : "none" }}
-          className="nav-link"
+          className="nav-link cartlog"
           to="/"
-        >Logout
+        ><span className="logout">
+        <h4 style={{'color':'white'}}>Logout</h4>
+      </span>
         </Link>
       </div>
                     

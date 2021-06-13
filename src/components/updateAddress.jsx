@@ -32,7 +32,7 @@ class UpdateAddress extends Component {
             let address={streetName:this.state.streetName, city: this.state.city};
             console.log('address => '+ JSON.stringify(address));
     
-            AddressService.updateAddress(this.state.addressId,address).then(res => {
+            AddressService.updateAddress(address,this.state.addressId).then(res => {
                 this.props.history.push(`/address`);
             });
     

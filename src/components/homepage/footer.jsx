@@ -86,22 +86,22 @@ export default class Footer extends Component {
                 <ul className="footer_ul2_amrc">
                   <li className="ll">
                     <a href="#">
-                      <Twitter /><br/> https://twitter.com/RRides
+                      <Twitter />&nbsp;https://twitter.com/RRides
                     </a>
                   </li>
                   <li className="ll">
                     <a href="#">
-                     <Facebook/> https://facebook.com/RRides
+                     <Facebook/>&nbsp;https://facebook.com/RRides
                     </a>
                   </li>
                   <li className="ll">
                     <a href="#">
-                      <Instagram/>https://instagram.com/RRides
+                      <Instagram/>&nbsp;https://instagram.com/RRides
                     </a>
                   </li>
                   <li className="ll">
                     <a href="#">
-                      <Youtube />https://youtube.com/RRides
+                      <Youtube />&nbsp;https://youtube.com/RRides
                     </a>
                   </li>
                   <li className="ll">

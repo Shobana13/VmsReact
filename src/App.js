@@ -48,9 +48,11 @@ if (localStorage.getItem('emailId')) {
 }
 function App() {
   return (
+   
     <Router>
       <Switch>
         <Route path="/" exact component={VehicleHomePage}></Route>
+        <div className="body1">
         <Route path="/customers" component={Customer}></Route>
         <Route path="/vehicle" exact component={Vehicle}></Route>
         <Route path="/driver" exact component={Driver}></Route>
@@ -87,11 +89,13 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
-         
+          </div>   
       </Switch>
-      <Footer/>
+      <Footer/> 
      </Router>
-         
+     
+     
+  
 
   );
   

@@ -32,12 +32,14 @@ const history= useHistory();
 
   };
   return (
+    
     <div>
     <Navbar/>
     <div className="body">
     <div className="mt-5 ">
+    <h1 style={{textAlign:"center"}}><b>Login</b></h1>
       <form onSubmit={submitHandler} style={{ width: "480px", margin: "auto" }}>
-        <h2>Email Id</h2>
+        <h4>Email Id</h4>
         <div>
           <label for="emailId" className="sr-only">
             emailId
@@ -56,7 +58,7 @@ const history= useHistory();
         <div class="mb-3 mt-2">
           <label for="password" class="form-label">
             {" "}
-            <h2>Password</h2>
+            <h4>Password</h4>
           </label>
           <input
             type="password"
@@ -90,11 +92,17 @@ const history= useHistory();
         <div className="mt-2">
       
         <button className="btn btn-primary button-large btn-block">Sign In</button>
-
+        <span className="psw" style={{textAlign:"center"}}><b>New User!<a href="\Register">Signup?</a></b></span>
         </div>
       </form>
     </div>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
   </div>
   );
 }
@@ -110,6 +118,7 @@ const mapStateToProps = state => {
 //     loginUser: () => dispatch(loginUser())
 //   }
 // }
+ 
 
 <Footer/>
 

@@ -10,7 +10,7 @@ class VehicleHomePage extends Component{
    
     render() { 
         return (  
-            <div style={{"backgroundColor":"#ebe8e8"}}>
+            <div className="home">
                 <Navbar />
                 <div>
                 <img src={v10} style={{"width":"100%", "height":"500px","opacity":"0.9"}} alt=""/>

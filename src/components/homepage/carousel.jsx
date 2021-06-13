@@ -22,7 +22,7 @@ class Carousel extends Component {
                 <img src={v6} className="d-block" alt=""/>
                 </div>
                 <div className="col">
-                  <h3 style={{"margin-top":"200px","fontFamily":"-moz-initial"}}>MINI</h3>
+                  <h3 style={{"margin-top":"200px","fontFamily":"-moz-initial"}}>SUV</h3>
                   <div class="sub-title" style={{"color" :"grey" ,"fontWeight":"bold"}}>Eco-friendly rides at pocket-friendly rates </div>
                  <p>
                  Fully air conditioned cars that you can share with others depending on your route and location.
@@ -39,7 +39,7 @@ class Carousel extends Component {
                 <img src={v3} classNameName="d-block" alt=""/>
                 </div>
                 <div className="col" > 
-                  <h3 style={{"margin-top":"200px","fontFamily":"-moz-initial"}}><b>MICRO</b></h3>
+                  <h3 style={{"margin-top":"200px","fontFamily":"-moz-initial"}}><b>SEDAN</b></h3>
                   <div class="sub-title" style={{"color" :"grey" ,"fontWeight":"bold"}}>Small fares for short rides</div>
                  <p>
                   Compact yet comfortable AC cars that seat up to 3 people and give you great value for your money. Small fares for short rides.
