@@ -70,31 +70,31 @@ class AddBooking extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center">Add Booking</h3>
+                            <h3 className="text-center" style={{marginTop:"30px"}}><b>Add Booking</b></h3>
                             <div className="card-body">
                                 <form>                              
                                     <div className="form-group">
-                                        <label>BookningId:</label>
+                                        <label><b>BookningId:</b></label>
                                         <input placeholder="Id" name="BookingId" className="form-control" value={this.state.bookingId} onChange={this.changeBookingIdHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Booking Date:</label>
+                                        <label><b>Booking Date:</b></label>
                                         <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Booked Till Date:</label>
+                                        <label><b>Booked Till Date:</b></label>
                                         <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Booking Description</label>
+                                        <label><b>Booking Description</b></label>
                                         <input placeholder="BookingDescription" name="BookingDescription" className="form-control" value={this.state.bookingDescription} onChange={this.changeBookingDescriptionHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Distance:</label>
+                                        <label><b>Distance:</b></label>
                                         <input placeholder="Distance" name="BookingDistance" className="form-control" value={this.state.distance} onChange={this.changeBookingDistanceHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>TotalCost:</label>
+                                        <label><b>TotalCost:</b></label>
                                         <input placeholder="Total Cost" name="Total Cost" className="form-control" value={this.state.totalCost} onChange={this.changeBookingTotalCostHandler}/>
                                     </div>
                                     <button className="btn btn-success" onClick={this.saveBooking}> Save</button>
