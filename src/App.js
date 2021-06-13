@@ -60,7 +60,8 @@ function App() {
         <Route path="/booking" exact component={Booking}></Route>
         <Route path="/address" component={Address}></Route>
         
-        <div className="body1" style={{height:"650px"}}>
+        
+        <div className="body1" style={{height:"700px"}}>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
