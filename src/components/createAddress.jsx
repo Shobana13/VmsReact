@@ -49,19 +49,19 @@ class CreateAddress extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center">Add Customer</h3>
+                            <h3 className="text-center"><b>Add Address</b></h3>
                             <div className="card-body">
                                 <form>
                                 <div className="form-group">
-                                        <label>AddressId:</label>
+                                        <label><b>AddressId:</b></label>
                                         <input placeholder="Id" name="AddressId" className="form-control" value={this.state.addressId} onChange={this.changeIdHandler}/>
                                 </div>
                                     <div className="form-group">
-                                        <label>StreetName:</label>
+                                        <label><b>StreetName:</b></label>
                                         <input placeholder="streetname" name="streetName" className="form-control" value={this.state.streetName} onChange={this.changeStreetNameHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>City:</label>
+                                        <label><b>City:</b></label>
                                         <input placeholder="city" name="city" className="form-control" value={this.state.city} onChange={this.changeCityHandler}/>
                                     </div>
                 

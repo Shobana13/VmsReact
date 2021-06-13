@@ -59,7 +59,10 @@ function App() {
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
         <Route path="/address" component={Address}></Route>
+        
         <div className="body1" style={{height:"650px"}}>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
         <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
@@ -84,8 +87,6 @@ function App() {
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
           <Route path="/vehiclehome" component={VehicleHome}></Route>
           <Route path="/driverhome" component={DriverHome}></Route>
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/register' component={Register} />
           <Route path="/makepayment" component={Paymentjs}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
           <Footer/>

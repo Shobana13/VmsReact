@@ -62,28 +62,28 @@ class CreateCustomer extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center">Add Customer</h3>
+                            <h3 className="text-center"><b>Add Customer</b></h3>
                             <div className="card-body">
                                 <form>
                                 <div className="form-group">
-                                        <label>CustomerId:</label>
-                                        <input placeholder="Id" name="CustomerId" className="form-control" value={this.state.customerId} onChange={this.changeIdHandler}/>
+                                        <label><b>CustomerId:</b></label>
+                                        <input placeholder="Id" name="CustomerId" className="form-control" value={this.state.customerId} onChange={this.changeIdHandler} required/>
                                 </div>
                                     <div className="form-group">
-                                        <label>FirstName:</label>
-                                        <input placeholder="firstname" name="firstName" className="form-control" value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
+                                        <label><b>FirstName:</b></label>
+                                        <input placeholder="firstname" name="firstName" className="form-control" value={this.state.firstName} onChange={this.changeFirstNameHandler} required/>
                                     </div>
                                     <div className="form-group">
-                                        <label>LastName:</label>
-                                        <input placeholder="lastname" name="lastName" className="form-control" value={this.state.lastName} onChange={this.changeLastNameHandler}/>
+                                        <label><b>LastName:</b></label>
+                                        <input placeholder="lastname" name="lastName" className="form-control" value={this.state.lastName} onChange={this.changeLastNameHandler} required/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Email:</label>
-                                        <input placeholder="Email" name="Email" className="form-control" value={this.state.emailId} onChange={this.changeEmailHandler}/>
+                                        <label><b>Email:</b></label>
+                                        <input placeholder="Email" name="Email" className="form-control" value={this.state.emailId} onChange={this.changeEmailHandler} required/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Mobile Number:</label>
-                                        <input placeholder="Mobile Number" name="Mobile" className="form-control" value={this.state.mobileNumber} onChange={this.changeMobileHandler}/>
+                                        <label><b>Mobile Number:</b></label>
+                                        <input placeholder="Mobile Number" name="Mobile" className="form-control" value={this.state.mobileNumber} onChange={this.changeMobileHandler} required/>
                                     </div>
                                     <button className="btn btn-success" onClick={this.saveCustomer}> Save</button>
                                     <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
