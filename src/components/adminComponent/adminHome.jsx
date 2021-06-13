@@ -2,7 +2,8 @@ import { Link} from "react-router-dom";
 import React from "react";
 import "./adminHome.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar } from "react-bootstrap";
+import Navbar from "../homepage/navbar";
+import { JournalArrowDown, PencilFill, PersonBoundingBox, PersonSquare, Truck, Wallet2 } from "react-bootstrap-icons";
 
 
 class AdminHome extends React.Component {
@@ -12,41 +13,38 @@ class AdminHome extends React.Component {
       <div>
         <Navbar/>
         <div class="sidebar-container sid">
-          <div class="sidebar-logo">
-            <h4>Online Vehicle Rental Management System</h4>
-          </div>
           <ul class="sidebar-navigation">
             <li class="header" style={{ paddingLeft: "0px" }}>
-              <h5>OPERATIONS</h5>
+              <h5>DASHBOARD</h5>
             </li>
             <li>
               <Link to="/customers">
-                   Customer
+                   <b><PersonBoundingBox/>&nbsp;Customer</b>
               </Link>
             </li>
             <li>
               <Link to="/address">
-                   Address
+                  <b><PencilFill/>&nbsp;Address</b>
               </Link>
             </li>
             <li>
               <Link to="/vehicle">
-                   Vehicle
+                  <b><Truck/>&nbsp;Vehicle</b>
               </Link>
             </li>
             <li>
               <Link to="/driver">
-                   Driver
+                   <b><PersonSquare/>&nbsp;Driver</b>
               </Link>
             </li>
             <li>
               <Link to="/booking">
-                   Booking
+                   <b><JournalArrowDown/>&nbsp;Booking</b>
               </Link>
             </li>
             <li>
               <Link to="/payment">
-                   Payment
+                   <b><Wallet2/>&nbsp;Payment</b>
               </Link>
             </li>
             

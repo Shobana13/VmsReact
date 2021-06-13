@@ -87,7 +87,7 @@ const history= useHistory();
             <option>Admin</option>
             <option>Customer</option>
           </select>
-          </div>*/}
+          </div>*/}     
         
         <div className="mt-2">
       

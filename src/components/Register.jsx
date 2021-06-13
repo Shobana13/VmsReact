@@ -73,7 +73,7 @@ function Register({registerUser}) {
             <b>Email</b>
           </label>
           <input
-            type="emailId"
+            type="emailId"  
             class="form-control"
             id="emailId"
             placeholder="emailId"

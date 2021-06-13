@@ -114,7 +114,7 @@ export default class Footer extends Component {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div>     
           </div>
 
           <div class="container">

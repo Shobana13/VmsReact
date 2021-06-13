@@ -52,6 +52,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={VehicleHomePage}></Route>
+        <Route path="/admin-components" component={AdminHome}></Route>
         <div className="body1">
         <Route path="/customers" component={Customer}></Route>
         <Route path="/vehicle" exact component={Vehicle}></Route>
@@ -65,7 +66,7 @@ function App() {
           <Route path="/add-address" component={CreateAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
-          <Route path="/admin-components" component={AdminHome}></Route>
+         
 
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
           <Route path="/vehiclehome" component={VehicleHome}></Route>
@@ -89,9 +90,9 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
+          <Footer/>
           </div>   
-      </Switch>
-      <Footer/> 
+      </Switch> 
      </Router>
      
      

@@ -87,7 +87,7 @@ function Navbar({ logoutUser }) {
                       </a>
                       </button>
                       <button className="btn dropdown-item indrop" type="button">
-                        <a  href="\">
+                        <a  href="\vehiclehome">
                           Categories
                       </a>
                       </button>

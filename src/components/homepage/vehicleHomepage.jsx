@@ -28,7 +28,7 @@ class VehicleHomePage extends Component{
                 <Carousel/>
             
             </div>
-
+   
         );
     }
 }
