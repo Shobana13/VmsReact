@@ -1,4 +1,5 @@
 //import React from "react";
+import { Link} from "react-router-dom";
 import React,{ Component }from "react";
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 import VehicleService from "../services/vehicleService";
@@ -7,6 +8,7 @@ import { setvehicles } from "../actions/vehicle-actions";
 import vehicle_reducer from "../reducers/vehicle_reducer";
 import vehicle_Types from "../services/vehicle_Types";
 import NavBar from '../components/homepage/navbar'
+import Categories from "../components/categories";
 
 
 const { useEffect } = React;
@@ -29,13 +31,11 @@ function VehicleHome() {
     }, []);
     console.log(vehicles);
 
-
-   
-
     return (
         <div>
              <NavBar/>
-                    <Container style={{ marginTop: "51px" }}>
+             <Categories/>
+                    <Container style={{ marginTop: "51px", marginLeft:"400px" }}>
                         <Row xs={1} md={3} className="g-4">
                             {vehicles.length &&
                                 vehicles.map((vehicle) => (
@@ -58,6 +58,8 @@ function VehicleHome() {
                         </Row>
                     </Container>
                 </div>
+               
+                
   );
 }
                             

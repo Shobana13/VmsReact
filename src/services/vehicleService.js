@@ -17,8 +17,8 @@ class VehicleService{
       async update(vehicleId,vehicle){
         return await axios.put(VEHICLE_API_BASE_URL + "/update/" + vehicleId,vehicle);
       }
-      async getVehicleByLocation(location){
-        return await axios.get(VEHICLE_API_BASE_URL + "/location/" + location );
+      async getVehicleByCategory(category){
+        return await axios.get(VEHICLE_API_BASE_URL + "/category/" + category );
       }
 }
 export default new VehicleService()
