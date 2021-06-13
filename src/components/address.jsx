@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navbar from "./homepage/navbar"
 import AddressService from '../services/addressService';
 
 class Address extends Component {
@@ -60,8 +61,11 @@ class Address extends Component {
 
     render() {
         return (
+            <div>
+            <Navbar />
             <div className="container">
                 <div>
+                
                     <h2 className="text-center">Address List</h2>
                     <div className="row">
                         <button className="btn btn-info" onClick={this.addAddress}>Add Address</button>
@@ -104,6 +108,7 @@ class Address extends Component {
 
                 </div>
             </div>
+        </div>
         );
     }
 }
