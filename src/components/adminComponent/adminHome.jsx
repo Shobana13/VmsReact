@@ -12,15 +12,15 @@ class AdminHome extends React.Component {
     
       <div>
         <Navbar/>
-        <div class="sidebar-container sid">
+        <div class="sidebar-container sid1">
           <ul class="sidebar-navigation">
             <li class="header" style={{ paddingLeft: "0px" }}>
               <h5>DASHBOARD</h5>
             </li>
             <li>
-              <Link to="/customers">
+             <Link to="/customers">
                    <b><PersonBoundingBox/>&nbsp;Customer</b>
-              </Link>
+              </Link >
             </li>
             <li>
               <Link to="/address">

@@ -24,7 +24,7 @@ class ViewCustomer extends Component {
                 <div className ="card-body">
                 <h1>{this.props.match.params.customerId}</h1>
                     <div className ="row">
-                        <label><b>Customer First Name: </b></label>
+                        <label><b>SUV</b></label>
                         <div>{this.state.customer.firstName}</div>
                     </div>
                     <div className ="row">
