@@ -4,6 +4,7 @@ import {Link,useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {registerUser} from '../actions/userActions'
 import Navbar from "./homepage/navbar";
+import Footer from "../components/homepage/footer"
 const { useState } = React;
 function Register({registerUser}) {
   const history = useHistory();
@@ -103,6 +104,7 @@ function Register({registerUser}) {
       <br/>
       <br/>
     </div>
+    <Footer/>
     </div>
   
     

@@ -5,6 +5,7 @@ import Carousel from './carousel';
 import Icons from './icons'
 import v10 from '../../images/v10.jpg'
 import Card from './card';
+import Footer from './footer'
 
 class VehicleHomePage extends Component{
    
@@ -26,6 +27,7 @@ class VehicleHomePage extends Component{
                 <Icons/>
                 <hr className="solid" sytle={{"border-top": "3px solid #bbb","margin-left":"5px"}}></hr>
                 <Carousel/>
+                <Footer/>
             
             </div>
    

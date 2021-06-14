@@ -41,6 +41,7 @@ import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
 
+
 let emailId
 if (localStorage.getItem('emailId')) {
   emailId = localStorage.getItem('emailId')
@@ -59,6 +60,7 @@ function App() {
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
         <Route path="/address" component={Address}></Route>
+      
         
         
         <div className="body1" style={{height:"700px"}}>

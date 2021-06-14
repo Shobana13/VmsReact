@@ -135,9 +135,8 @@ function Navbar({ logoutUser }) {
         </Link>
         <Link
           style={{ display: userIsLoggedIn ? "none" : "block" }}
-          className="text"
-        >
-          <h4>{user && user.FirstName}</h4>
+          className="text">
+          <h4>{user && user.firstName}</h4>
         </Link>
         <Link
           onClick={handleSubmit}
