@@ -1,5 +1,5 @@
 .sidebar-container {
-    position: fixed;
+    position: absolute;
     width: 220px;
     height: 100%;
     left: 0;
@@ -82,10 +82,16 @@
   .content-container {
     padding-left: 220px;
   }
+  .sid1
+{
+    width: 300px;
+    
+}
 
 .sid
 {
     width: 300px;
+    height: 2325px;
 }
 
 .jj
