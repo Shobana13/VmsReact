@@ -132,6 +132,7 @@ class Customer extends Component {
                             </tbody>
                         </table>
                     </div>
+                    <a class="btn btn-primary" href="\admin-components" role="button">Back</a> 
                 </div>
             </div>
         );

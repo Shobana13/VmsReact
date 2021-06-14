@@ -85,6 +85,7 @@ class CreateCustomer extends Component {
                                         <label><b>Mobile Number:</b></label>
                                         <input placeholder="Mobile Number" name="Mobile" className="form-control" value={this.state.mobileNumber} onChange={this.changeMobileHandler} required/>
                                     </div>
+                        
                                     <button className="btn btn-success" onClick={this.saveCustomer}> Save</button>
                                     <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 

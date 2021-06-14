@@ -20,7 +20,7 @@ class ViewVehicle extends Component {
         return ( 
             <div className="card col-md-6 offset-md-3">
                 <h3 className ="text-center"> View Vehicle Details</h3>
-                <div className="card bg-info text-dark">
+                <div className="card bg-dark text-white">
                 <div className ="card-body">
                 <h1>{this.props.match.params.vehicleId}</h1>
                     <div className ="row">
@@ -61,7 +61,7 @@ class ViewVehicle extends Component {
                     </div>
                         
                 </div>
-
+                <a class="btn btn-primary" href="\vehicle" role="button">Back</a>    
                 </div>
             </div>
          )
