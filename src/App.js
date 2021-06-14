@@ -53,6 +53,8 @@ import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
+import TotalCost from './components/totalcost';
+import BookingHome from './components/BookingHome';
 
 let emailId
 if (localStorage.getItem('emailId')) {
@@ -73,7 +75,7 @@ function App() {
         <Route path="/booking" exact component={Booking}></Route>
         <Route path="/address" component={Address}></Route>
         
-        
+
         <div className="body1" style={{height:"700px"}}>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
@@ -114,6 +116,8 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
+          <Route path="/totalcost" component={TotalCost}></Route>
+          <Route path="/bookinghome" component={BookingHome}></Route>
         </div>
         <div className="body1">
           <Route path="/vehicledetails" component={VehicleDetails}></Route>

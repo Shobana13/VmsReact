@@ -65,15 +65,15 @@ class AdBooking extends Component {
                             <div className="card-body">
                                 <form>                              
                                     <div className="form-group">
-                                        <label>BookningId:</label>
+                                        <label><b>BookningId:</b></label>
                                         <input placeholder="Id" name="BookingId" className="form-control" value={this.state.bookingId} onChange={this.changeBookingIdHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Booking Date:</label>
+                                        <label><b>Booking Date:</b></label>
                                         <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Booked Till Date:</label>
+                                        <label><b>Booked Till Date:</b></label>
                                         <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler}/>
                                     </div>
                                    
