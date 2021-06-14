@@ -25,6 +25,19 @@ import Register from './components/Register';
 import VehicleHome from './components/VehicleHome';
 import DriverHome from './components/DriverHome';
 import VehicleDetails from './components/vehicleDetails';
+import Location from './components/location';
+import CompanyLocation from './components/companyLocation';
+import LucknowLocation from './components/lucknowLocation';
+import ChennaiLocation from './components/chennaiLocation';
+import BengaluruLocation from './components/bengaluruLocation';
+import DelhiLocation from './components/delhiLocation';
+import MumbaiLocation from './components/mumbaiLocation';
+import Company from './components/company';
+import Suv from './components/suv';
+import Sedan from './components/sedan'
+import MiniBus from './components/miniBus'
+import Coach from './components/coach'
+import Hatchback from './components/hatchback'
 import Footer from './components/homepage/footer';
 import { loadUser } from './actions/userActions'
 import { useEffect } from 'react'
@@ -40,6 +53,8 @@ import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
+import TotalCost from './components/totalcost';
+import BookingHome from './components/BookingHome';
 
 
 let emailId
@@ -62,7 +77,7 @@ function App() {
         <Route path="/address" component={Address}></Route>
       
         
-        
+
         <div className="body1" style={{height:"700px"}}>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
@@ -72,6 +87,24 @@ function App() {
           <Route path="/add-address" component={CreateAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
+       
+
+          <Route path="/vehicledetails" component={VehicleDetails}></Route>
+          <Route path="/vehiclehome" component={VehicleHome}></Route>
+          <Route path="/driverhome" component={DriverHome}></Route>
+          <Route path="/location" component={Location}></Route>
+          <Route path="/lucknowlocation" component={LucknowLocation}></Route>
+          <Route path="/companyLocation" component={CompanyLocation}></Route>
+          <Route path="/chennaiLocation" component={ChennaiLocation}></Route>
+          <Route path="/bengaluruLocation" component={BengaluruLocation}></Route>
+          <Route path="/delhiLocation" component={DelhiLocation}></Route>
+          <Route path="/mumbaiLocation" component={MumbaiLocation}></Route>
+          <Route path="/company" component={Company}></Route>
+          <Route path="/suv" component={Suv}></Route>
+          <Route path="/hatchback" component={Hatchback}></Route>
+          <Route path="/sedan" component={Sedan}></Route>
+          <Route path="/miniBus" component={MiniBus}></Route>
+          <Route path="/coach" component={Coach}></Route>
           <Route path="/add-vehicle" component={AddVehicle}></Route>
           <Route path="/view-vehicle/:vehicleId" component={ViewVehicle}></Route>
           <Route path="/update-vehicles/:vehicleId" component={Update}></Route>
@@ -85,6 +118,8 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
+          <Route path="/totalcost" component={TotalCost}></Route>
+          <Route path="/bookinghome" component={BookingHome}></Route>
         </div>
         <div className="body1">
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
