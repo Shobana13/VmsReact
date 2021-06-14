@@ -39,6 +39,7 @@ class ViewPayment extends Component {
                         <label><b>Payment Status: </b></label>
                         <div>{this.state.payment.paymentStatus}</div>
                     </div>
+                    <a class="btn btn-primary" href="\payment" role="button">Back</a>    
                         
                 </div>
 

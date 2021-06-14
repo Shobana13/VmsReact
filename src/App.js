@@ -66,20 +66,24 @@ function App() {
       <Switch>
         <Route path="/" exact component={VehicleHomePage}></Route>
         <Route path="/admin-components" component={AdminHome}></Route>
-        <div className="body1">
         <Route path="/customers" component={Customer}></Route>
         <Route path="/vehicle" exact component={Vehicle}></Route>
         <Route path="/driver" exact component={Driver}></Route>
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
-          <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+        <Route path="/address" component={Address}></Route>
+        
+        
+        <div className="body1" style={{height:"700px"}}>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
-          <Route path="/address" component={Address}></Route>
           <Route path="/add-address" component={CreateAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
-         
+       
 
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
           <Route path="/vehiclehome" component={VehicleHome}></Route>
@@ -97,36 +101,31 @@ function App() {
           <Route path="/sedan" component={Sedan}></Route>
           <Route path="/miniBus" component={MiniBus}></Route>
           <Route path="/coach" component={Coach}></Route>
-
-
           <Route path="/add-vehicle" component={AddVehicle}></Route>
           <Route path="/view-vehicle/:vehicleId" component={ViewVehicle}></Route>
           <Route path="/update-vehicles/:vehicleId" component={Update}></Route>
           <Route path="/add-driver" component={AddDriver}></Route>
           <Route path="/view-driver/:driverId" component={ViewDriver}></Route>
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/register' component={Register} />
           <Route path="/update-drivers/:driverId" component={UpdateDriver}></Route>
-
           <Route path="/add-payment" component={AddPayment}></Route>
           <Route path="/view-payment/:paymentId" component={ViewPayment}></Route>
           <Route path="/update-payment/:paymentId" component={UpdatePayment}></Route>
-          <Route path="/makepayment" component={Paymentjs}></Route>
-
           <Route path="/view-booking/:bookingId" component={ViewBooking}></Route>
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
+          <Route path="/ad-booking" component={AdBooking}></Route>
+        </div>
+        <div className="body1">
+          <Route path="/vehicledetails" component={VehicleDetails}></Route>
+          <Route path="/vehiclehome" component={VehicleHome}></Route>
+          <Route path="/driverhome" component={DriverHome}></Route>
+          <Route path="/makepayment" component={Paymentjs}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
           <Footer/>
           </div>   
       </Switch> 
      </Router>
-     
-     
-  
-
-  );
-  
-}
+     );
+  }
 
 export default App;

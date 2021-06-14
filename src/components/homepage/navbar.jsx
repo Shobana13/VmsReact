@@ -12,7 +12,6 @@ import "./navbar.css";
 import { connect, useSelector } from "react-redux";
 import { logoutUser } from "../../actions/userActions";
 
-
 import { Link } from "react-router-dom"; 
 
 function Navbar({ logoutUser }) {
@@ -28,9 +27,7 @@ function Navbar({ logoutUser }) {
 
   
     return (
-    
       <div>
-        
         <header className="section-header hh">
           <section className="header-main border-bottom sec">
             <div className="container-fluid">
@@ -87,7 +84,7 @@ function Navbar({ logoutUser }) {
                       </a>
                       </button>
                       <button className="btn dropdown-item indrop" type="button">
-                        <a  href="\vehiclehome">
+                        <a  href="\">
                           Categories
                       </a>
                       </button>
