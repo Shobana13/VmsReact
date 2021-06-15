@@ -47,14 +47,14 @@ import ViewPayment from './components/viewPayment';
 import UpdatePayment from './components/updatePayment';
 import AddPayment from './components/addPayment';
 import Payments from "./components/payments";
-import Paymentjs from "./components/paymentjs";
+import PaymentPage from "./components/paymentPage";
 import Booking from './components/booking';
 import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
-
-import View from './components/view';
+import CreditCard from './components/creditCard';
+import AddCreditCard from './components/addCreditCard';
 
 import TotalCost from './components/totalcost';
 import BookingHome from './components/BookingHome';
@@ -78,12 +78,14 @@ function App() {
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
 
+
         <Route path="/" exact component={VehicleHomePage}></Route>
 
 
         <div className="body1" style={{ height: "100%" }}>
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
 
         
@@ -126,31 +128,33 @@ function App() {
           <Route path="/add-payment" component={AddPayment}></Route>
           <Route path="/view-payment/:paymentId" component={ViewPayment}></Route>
           <Route path="/update-payment/:paymentId" component={UpdatePayment}></Route>
+
+          <Route path="/makepayment" component={PaymentPage}></Route>
+
+
           <Route path="/view-booking/:bookingId" component={ViewBooking}></Route>
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
 
-          <Route path="/view" component={View}></Route>
+
+          <Route path="/creditcard" component={CreditCard}></Route>
+          <Route path="/add-creditcard" component={AddCreditCard}></Route>
+         
+      </Switch>
+      <Footer/>
+     </Router>
 
 
 
 
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
-        </div>
-        <div className="body1">
-          <Route path="/vehicledetails" component={VehicleDetails}></Route>
-          <Route path="/vehiclehome" component={VehicleHome}></Route>
-          <Route path="/driverhome" component={DriverHome}></Route>
-
-          <Route path="/makepayment" component={Paymentjs}></Route>
-
-
-        </div>
+        
       </Switch>
     </Router>
   );
 }
 
 export default App;
+
