@@ -91,7 +91,7 @@ function App() {
         <div className="body1" style={{height:"700px"}}>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+ 
 
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
