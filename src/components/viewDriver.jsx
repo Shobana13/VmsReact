@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import driverService from '../services/driverService';
+<<<<<<< HEAD
 
+=======
+import NavBar from "./homepage/navbar";
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 class ViewDriver extends Component {
     constructor(props){
@@ -18,8 +22,12 @@ class ViewDriver extends Component {
     }
     render() { 
         return ( 
+<<<<<<< HEAD
+=======
+            <div><NavBar/><br/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
             <div className="card col-md-6 offset-md-3">
-                <h3 className ="text-center"> View Driver Details</h3>
+                <h3 className ="text-center"><b>VIEW DRIVER DETAILS</b> </h3>
                 <div className="card bg-dark text-light">
                 <div className ="card-body">
                 <h1>{this.props.match.params.driverId}</h1>

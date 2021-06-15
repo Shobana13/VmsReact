@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios'
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import { connect } from "react-redux";
 import {  useHistory } from "react-router";
 import { loginUser } from "../actions/userActions";
@@ -12,12 +12,12 @@ const history= useHistory();
   const [loginDetails, setLoginDetails] = useState({
     emailId: "",
     password: "",
-    //userRole:"",
+  
   });
 
   const submitHandler = async(e) => {
     e.preventDefault();
-    // loginUser(loginDetails);
+    
  loginUser(loginDetails)
  if(loginDetails.emailId==="admin123@gmail.com" && loginDetails.password==="admin"){
              
@@ -32,7 +32,7 @@ const history= useHistory();
   return (
     
     <div>
-    <Navbar/>
+    <NavBar/>
     <div className="body">
     <div className="mt-5 ">
     <h1 style={{textAlign:"center"}}><b>Login</b></h1>
@@ -69,23 +69,7 @@ const history= useHistory();
             value={loginDetails.password}
           />
         </div>
-        {/*<div class="mb-3 mt-2">
-          <label for="userRole" class="form-label">
-            {" "}
-            <h2>UserRole</h2>
-          </label>
-          <select type="userRole"
-            class="form-control"
-            id="userRole"
-            placeholder="userRole"
-            onChange={(e) =>
-              setLoginDetails({ ...loginDetails, userRole: e.target.value })
-            }
-            value={loginDetails.userRole}>
-            <option>Admin</option>
-            <option>Customer</option>
-          </select>
-          </div>*/}     
+          
         
         <div className="mt-2">
       
@@ -100,8 +84,12 @@ const history= useHistory();
     <br/>
     <br/>
     <br/>
+<<<<<<< HEAD
     <br/>
     <Footer/>
+=======
+    <br/><Footer/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
   </div>
   
   );
@@ -113,14 +101,8 @@ const mapStateToProps = state => {
     loggedIn: state.user.loggedIn
   }
 }
-//const mapDispatchToProps = dispatch => {
-//   return {
-//     loginUser: () => dispatch(loginUser())
-//   }
-// }
- 
 
-<Footer/>
+
 
 export default connect(
   mapStateToProps,

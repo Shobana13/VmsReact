@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import DriverService from '../services/driverService';
+<<<<<<< HEAD
+=======
+import NavBar from '../components/homepage/navbar'
+import Footer from "./homepage/footer";
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 class AddDriver extends Component {
     constructor(props){
         super(props)
@@ -64,9 +69,15 @@ class AddDriver extends Component {
 
 
 
+<<<<<<< HEAD
     render() { 
         return (  
             <div>
+=======
+    render() {
+        return (
+            <div><NavBar /><br />
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

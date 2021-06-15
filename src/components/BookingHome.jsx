@@ -43,9 +43,12 @@ function BookingHome() {
                                                 <Card.Text><h3>Total Cost for booking the vehicle : </h3><h2>Rs.{booking.totalCost}</h2></Card.Text>
                                                 <Card.Text><h3>Vehicle is booked starting from Date : </h3><h4>{booking.bookingDate}</h4></Card.Text>
                                                 <Card.Text><h3>Vehicle is Booked till Date : </h3><h4>{booking.bookedTillDate}</h4></Card.Text>                                 
-                                                <Button variant="primary btn-block">Book Now</Button>
+                                                
+                                                
                                             </Card.Body>
-                                        </Card><br/><br/>
+                                            
+                                        </Card><br/>
+                                        <a class="btn btn-success btn-block" style={{marginLeft:"425px"}} href="\makepayment" role="button "><h2>Book Now</h2></a><br/>
                                     </Col>
 
                                 ))}

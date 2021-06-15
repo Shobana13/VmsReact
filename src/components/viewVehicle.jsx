@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import vehicleService from '../services/vehicleService';
+import NavBar from "./homepage/navbar";
 
 
 class ViewVehicle extends Component {
@@ -18,6 +19,8 @@ class ViewVehicle extends Component {
     }
     render() { 
         return ( 
+            <div>
+            <NavBar/>
             <div className="card col-md-6 offset-md-3">
                 <h3 className ="text-center"> View Vehicle Details</h3>
                 <div className="card bg-dark text-white">
@@ -59,10 +62,10 @@ class ViewVehicle extends Component {
                         <label><b>Vehicle FixedCharges: </b></label>
                         <div>{this.state.vehicle.fixedCharges}</div>
                     </div>
-                        
+                    </div>  
                 </div>
-                <a class="btn btn-primary" href="\vehicle" role="button">Back</a>    
-                </div>
+                <a class="btn btn-primary" href="\vehicle" role="button">Back</a>   
+                </div><br/> <br/><br/><br/>
             </div>
          )
     }

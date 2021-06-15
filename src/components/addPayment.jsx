@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import PaymentService from '../services/paymentService';
+<<<<<<< HEAD
+=======
+import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 class AddPayment extends Component {
 
@@ -48,10 +52,17 @@ class AddPayment extends Component {
     cancel(){
         this.props.history.push('/payment');
     }
+<<<<<<< HEAD
     
     render() { 
         return (  
             <div>
+=======
+
+    render() {
+        return (
+            <div><NavBar/><br />
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

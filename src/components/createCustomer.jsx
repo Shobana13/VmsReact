@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import CustomerService from '../services/customerService';
+<<<<<<< HEAD
+=======
+import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 class CreateCustomer extends Component {
     constructor(props){
         super(props)
@@ -59,6 +63,10 @@ class CreateCustomer extends Component {
     render() { 
         return (  
             <div>
+<<<<<<< HEAD
+=======
+                <NavBar /><br /><br />
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

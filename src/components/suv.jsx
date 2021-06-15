@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-//import DateRangePicker from 'react-bootstrap-daterangepicker';
+
 import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap-daterangepicker/daterangepicker.css';
 //import carpark from '../../image/carpark.jpg';
-import Navbar from "./homepage/navbar";
+import Navbar from '../components/homepage/navbar'
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 
 class Suv extends Component {

@@ -6,6 +6,7 @@ import chennai from "../images/chennai.jpg"
 import loc from "../images/loc.jpg"
 import delhi1 from "../images/delhi1.jpg"
 import mumbai from "../images/mumbai.jpg"
+<<<<<<< HEAD
 import { Link} from "react-router-dom";
 //import sbi from "../images/sbi.jpg";
 //import Axis1 from "../images/Axis1.jpg";
@@ -16,6 +17,11 @@ import { Link} from "react-router-dom";
 //import gpay from "../images/gpay.jpg";
 //import Kotak from "../images/Kotak.jpg";
 //import pnb from "../images/pnb.jpg";
+=======
+import { Link } from "react-router-dom";
+import Navbar from '../components/homepage/navbar'
+import Footer from "./homepage/footer";
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
  class Company extends Component {
     constructor(props) {
@@ -33,8 +39,13 @@ import { Link} from "react-router-dom";
 
                 <div class="body2">
 
+<<<<<<< HEAD
                     <div ><br/><br/><br/><br/>
                     
+=======
+                    <div ><br />
+
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                         <div class="container paymentjscontainer">
                             <center>
                                 <div class="paymentjs-head"><h1>CLICK BELOW LINK TO SELECT THE LOCATION</h1></div><br/><br/><br/>

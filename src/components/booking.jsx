@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BookingService from "../services/bookingService";
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 class Booking extends Component {
     constructor(props) {
@@ -8,7 +8,17 @@ class Booking extends Component {
 
         this.state = {
             bookings: []
+<<<<<<< HEAD
   
+=======
+
+        }
+        //this.viewBooking = this.viewBooking.bind(this);
+        this.addBooking = this.addBooking.bind(this);
+        this.adBooking = this.adBooking.bind(this);
+        this.updateBookingDate = this.updateBookingDate.bind(this);
+        this.cancelBooking = this.cancelBooking.bind(this);
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
     }
     //this.viewBooking = this.viewBooking.bind(this);
     this.addBooking=this.addBooking.bind(this);
@@ -34,7 +44,14 @@ state = {
     addBooking(){
         this.props.history.push('/add-booking');
     }
+<<<<<<< HEAD
     updateBookingDate(bookingId){
+=======
+    adBooking() {
+        this.props.history.push('/ad-booking');
+    }
+    updateBookingDate(bookingId) {
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
         this.props.history.push(`/update-booking/${bookingId}`);
     }
     cancelBooking(bookingId){
@@ -48,7 +65,11 @@ state = {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <Navbar/><br/><br/><br/><br/>
+=======
+                <NavBar /><br /><br /><br /><br />
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                 <h2 className="text-center">Booking List</h2>
                 <div className="row">

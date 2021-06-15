@@ -3,7 +3,12 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap-daterangepicker/daterangepicker.css';
 //import carpark from '../../image/carpark.jpg';
+<<<<<<< HEAD
 import Navbar from "./homepage/navbar";
+=======
+
+import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 
 class MiniBusLocation extends Component {
@@ -11,7 +16,7 @@ class MiniBusLocation extends Component {
         return (
             
             <div class="body">
-            <Navbar/>
+            <NavBar/>
             <div>
                 <div className="container" >
                     <div className="row">

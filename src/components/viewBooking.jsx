@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import bookingService from '../services/bookingService';
+<<<<<<< HEAD
 
+=======
+import NavBar from '../components/homepage/navbar';
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 class ViewBooking extends Component {
     constructor(props){
@@ -19,6 +23,10 @@ class ViewBooking extends Component {
     
     render() { 
         return ( 
+<<<<<<< HEAD
+=======
+            <div><NavBar/><br/><br/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
             <div className="card col-md-6 offset-md-3">
                 <h3 className ="text-center"> View Booking Details</h3>
                 <div className="card bg-info text-dark">

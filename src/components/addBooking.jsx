@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BookingService from '../services/bookingService';
 
+
 class AddBooking extends Component {
 
     constructor(props){
@@ -13,6 +14,7 @@ class AddBooking extends Component {
             totalCost:'',
             distance:'',
         }
+<<<<<<< HEAD
         this.changeBookingDateHandler=this.changeBookingDateHandler.bind(this);
         this.changeBookedTillDateHandler=this.changeBookedTillDateHandler.bind(this);
         this.changeBookingDescriptionHandler=this.changeBookingDescriptionHandler.bind(this);
@@ -20,12 +22,25 @@ class AddBooking extends Component {
         this.changeBookingDistanceHandler=this.changeBookingDistanceHandler.bind(this);
         this.saveBooking=this.saveBooking.bind(this);
         this.changeBookingIdHandler=this.changeBookingIdHandler.bind(this);
+=======
+        this.changeBookingDateHandler = this.changeBookingDateHandler.bind(this);
+        this.changeBookedTillDateHandler = this.changeBookedTillDateHandler.bind(this);
+        this.changeBookingDescriptionHandler = this.changeBookingDescriptionHandler.bind(this);
+        this.changeBookingTotalCostHandler = this.changeBookingTotalCostHandler.bind(this);
+        this.changeBookingDistanceHandler = this.changeBookingDistanceHandler.bind(this);
+        this.saveBooking = this.saveBooking.bind(this);
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
     }
 
     saveBooking = (e) => {
         e.preventDefault();
+<<<<<<< HEAD
         let booking={bookingId:this.state.bookingId, bookingDate: this.state.bookingDate, bookedTillDate: this.state.bookedTillDate,bookingDescription: this.state.bookingDescription,totalCost: this.state.totalCost,distance: this.state.distance};
         console.log('booking => '+ JSON.stringify(booking));
+=======
+        let booking = {bookingDate: this.state.bookingDate, bookedTillDate: this.state.bookedTillDate, bookingDescription: this.state.bookingDescription, totalCost: this.state.totalCost, distance: this.state.distance };
+        console.log('booking => ' + JSON.stringify(booking));
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
         BookingService.addBooking(booking).then((res) => {
               this.props.history.push(`/booking`);
@@ -33,9 +48,13 @@ class AddBooking extends Component {
 
     }
 
+<<<<<<< HEAD
     changeBookingIdHandler=(event) =>{
         this.setState({bookingId: event.target.value})
     }
+=======
+   
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
     changeBookingDateHandler=(event) =>{
         this.setState({bookingDate: event.target.value})
@@ -49,6 +68,21 @@ class AddBooking extends Component {
         this.setState({bookingDescription: event.target.value})
     }
 
+<<<<<<< HEAD
+=======
+
+    changeBookingTotalCostHandler = (event) => {
+        this.setState({ bookingDescription: event.target.value })
+    }
+
+
+   
+  changeBookingDistanceHandler = (event) => {
+        this.setState({ distance: event.target.value })
+    }
+
+
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
     changeBookingDistanceHandler=(event) =>{
         this.setState({distance: event.target.value})
     }
@@ -70,10 +104,13 @@ class AddBooking extends Component {
                             <div className="card-body">
                                 <form>                              
                                     <div className="form-group">
+<<<<<<< HEAD
                                         <label><b>BookningId:</b></label>
                                         <input placeholder="Id" name="BookingId" className="form-control" value={this.state.bookingId} onChange={this.changeBookingIdHandler}/>
                                     </div>
                                     <div className="form-group">
+=======
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                                         <label><b>Booking Date:</b></label>
                                         <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler}/>
                                     </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CustomerService from '../services/customerService'
-import Navbar from './homepage/navbar';
+import NavBar from '../components/homepage/navbar'
 
 
 
@@ -76,7 +76,7 @@ class Customer extends Component {
 
         return (
             <div>
-                <Navbar />
+                <NavBar />
                 <br />
                 <br />
 

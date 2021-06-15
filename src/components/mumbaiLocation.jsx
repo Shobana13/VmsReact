@@ -3,14 +3,20 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap-daterangepicker/daterangepicker.css';
 //import carpark from '../../image/carpark.jpg';
+<<<<<<< HEAD
 import Navbar from "./homepage/navbar";
+=======
+import NavBar from '../components/homepage/navbar'
+import Footer from "./homepage/footer";
+import { Building, GeoAltFill} from 'react-bootstrap-icons';
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 class MumbaiLocation extends Component {
     render() {
         return (
             
             <div class="body">
-            <Navbar/>
+            <NavBar/>
             <div>
                 <div className="container" style={{marginLeft:"300px"}}>
                     <div className="row">

@@ -47,12 +47,21 @@ import ViewPayment from './components/viewPayment';
 import UpdatePayment from './components/updatePayment';
 import AddPayment from './components/addPayment';
 import Payments from "./components/payments";
-import Paymentjs from "./components/paymentjs";
+import PaymentPage from "./components/paymentPage";
 import Booking from './components/booking';
 import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
+<<<<<<< HEAD
+=======
+
+
+import CreditCard from './components/creditCard';
+import AddCreditCard from './components/addCreditCard';
+
+
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 import TotalCost from './components/totalcost';
 import BookingHome from './components/BookingHome';
 
@@ -74,20 +83,47 @@ function App() {
         <Route path="/driver" exact component={Driver}></Route>
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
+<<<<<<< HEAD
         <Route path="/address" component={Address}></Route>
       
+=======
+
+
+        <Route path="/" exact component={VehicleHomePage}></Route>
+
+
+        <div className="body1" style={{ height: "100%" }}>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+
+
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
         
 
-        <div className="body1" style={{height:"700px"}}>
+      
+ 
+
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
           <Route path="/add-address" component={CreateAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
+<<<<<<< HEAD
        
+=======
+          <Route path="/address" component={Address}></Route>
+
+
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
           <Route path="/vehiclehome" component={VehicleHome}></Route>
@@ -114,10 +150,15 @@ function App() {
           <Route path="/add-payment" component={AddPayment}></Route>
           <Route path="/view-payment/:paymentId" component={ViewPayment}></Route>
           <Route path="/update-payment/:paymentId" component={UpdatePayment}></Route>
+          <div className="body1">
+          <Route path="/makepayment" component={PaymentPage}></Route>
+          </div>
+          
           <Route path="/view-booking/:bookingId" component={ViewBooking}></Route>
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
+<<<<<<< HEAD
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
         </div>
@@ -133,5 +174,24 @@ function App() {
      </Router>
      );
   }
+=======
+
+         <Route path="/creditcard" component={CreditCard}></Route>
+          <Route path="/add-creditcard" component={AddCreditCard}></Route>
+         
+          <Route path="/totalcost" component={TotalCost}></Route>
+          <Route path="/bookinghome" component={BookingHome}></Route>
+
+        </div>
+      
+
+      
+      </Switch>      
+
+    </Router>
+  );
+}
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 export default App;
+

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../components/homepage/navbar';
+import NavBar from '../components/homepage/navbar';
 
 class TotalCost extends Component{
 
@@ -28,7 +28,7 @@ class TotalCost extends Component{
     render(){
         return(
             <div>
-            <Navbar/>
+            <NavBar/>
             <br></br>
             <br></br>
             <br></br>

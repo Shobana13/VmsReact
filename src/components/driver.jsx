@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DriverService from "../services/driverService";
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 
 class Driver extends Component {
@@ -58,9 +58,15 @@ class Driver extends Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <Navbar/>
                 <br/>
                 <br/>
+=======
+                <NavBar />
+                <br />
+                <br />
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                 <form className="form-inline my-2 my-lg-0">
                     <input

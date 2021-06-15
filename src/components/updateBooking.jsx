@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import BookingService from '../services/bookingService';
+<<<<<<< HEAD
+=======
+import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 class UpdateBooking extends Component {
 
@@ -77,7 +81,11 @@ class UpdateBooking extends Component {
 
     render() { 
         return (  
+<<<<<<< HEAD
             <div>
+=======
+            <div><NavBar/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

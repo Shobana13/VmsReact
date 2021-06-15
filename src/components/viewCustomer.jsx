@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import CustomerService from '../services/customerService';
 
 
+import NavBar from "./homepage/navbar";
+
+
+
 class ViewCustomer extends Component {
     constructor(props){
         super(props)
@@ -18,8 +22,17 @@ class ViewCustomer extends Component {
     }
     render() { 
         return ( 
+<<<<<<< HEAD
             <div className="card col-md-6 offset-md-3">
                 <h3 className ="text-center"> View Customer Details</h3>
+=======
+            <div >
+        <NavBar/><br/><br/>
+           
+            <div className="card col-md-6 offset-md-3" >
+                
+                <h3 className ="text-center"><b>VIEW CUSTOMER DETAILS</b></h3>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="card bg-dark text-light">
                 <div className ="card-body">
                 <h1>{this.props.match.params.customerId}</h1>
