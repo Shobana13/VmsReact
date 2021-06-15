@@ -5,7 +5,8 @@ import {
   Person,
   Search,
   PencilSquare,
-  BoxArrowRight
+  BoxArrowRight,
+  HouseFill
 } from "react-bootstrap-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
@@ -35,34 +36,13 @@ function Navbar({ logoutUser }) {
                 <Link to="/" style={{ textDecoration: "none" }}>
                   <a href="#" className="brand-wrap headANDlogo" data-abc="true">
                     <div classNameName="slogan">
-                      <span className="logo medtitle" style={{ "fontFamily": "-moz-initial" }}>Rental Rides</span>{" "}
+                      <span className="logo medtitle" style={{ "fontFamily": "-moz-initial" }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rental Rides</span>{" "}
                     </div>
 
                   </a>{" "}
                 </Link>
               </div>
               <div className="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
-                <form action="#" className="search-wrap">
-                  <div className="input-group w-50">
-                    {" "}
-                    <input
-                      type="text"
-                      className="form-control search-form"
-                      style={{ width: "40%;" }}
-                      placeholder="Search"
-                    />
-                    <div className="input-group-append">
-                      {" "}
-                      <button
-                        className="btn btn-dark search-button"
-                        type="submit"
-                      >
-                        {" "}
-                        <Search />
-                      </button>{" "}
-                    </div>
-                  </div>
-                </form>
               </div>
 
               <div className="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
@@ -71,28 +51,7 @@ function Navbar({ logoutUser }) {
                     {" "}
                     <div className="blink_me" style={{ 'color': 'white' }}><h4>Rentals</h4></div>
                   </button>
-                  <div className="dropdown drop">
-                    <button
-                      className="btn btn-dark dropdown-toggle dropp" type="button" data-toggle="dropdown" style={{ marginTop: "5px" }}><List /></button>
-                    <div
-                      className="dropdown-menu">
-                      <button className="btn dropdown-item indrop" type="button">
-                        <a href="\">
-                          Home
-                        </a>
-                      </button>
-                      <button className="btn dropdown-item indrop" type="button">
-                        <a href="\">
-                          Categories
-                        </a>
-                      </button>
-                      <button className="btn dropdown-item indrop" type="button">
-                        <a href="\">
-                          Profile
-                        </a>
-                      </button>
-                    </div>
-                  </div>&nbsp;&nbsp;&nbsp;
+                  <div className="nav-link nav-user-img cartLog"><Link to ="/" style={{color:"white", fontSize:"22px"}} ><HouseFill/></Link></div>
                   <Link to="/vehicleHome" style={{ textDecoration: "none" }}>
                     <a
                       className="nav-link nav-user-img cartLog"

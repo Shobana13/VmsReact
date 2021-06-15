@@ -30,7 +30,7 @@ class AddCreditCard extends Component {
         console.log('creditCard => '+ JSON.stringify(creditCard));
 
         CreditCardService.addCreditCard(creditCard).then((res) => {
-              this.props.history.push(`/creditCard`);
+              this.props.history.push(`/thanks`);
         });
 
     }
@@ -55,10 +55,7 @@ class AddCreditCard extends Component {
         this.setState({expiryDate: event.target.value})
     }
 
-    cancel(){
-        this.props.history.push('/creditCard');
-    }
-
+    
     
     
     
@@ -69,6 +66,7 @@ class AddCreditCard extends Component {
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3 pay-pad">
                             <h3 className="text-center">Credit Card Payment</h3>
+                            <h2>Rs.1500</h2>
                             <div className="card-body">
                                 <form>
                                 
@@ -88,7 +86,7 @@ class AddCreditCard extends Component {
                                         <label>ExpiryDate:</label>
                                         <input placeholder="ExpiryDate" name="ExpiryDate" className="form-control" value={this.state.expiryDate} onChange={this.changeExpiryDateHandler}/>
                                     </div>
-                                    <button className="btn btn-success btn-block" onClick={this.saveCreditCard}><h6>Proceed to Pay</h6></button>
+                                    <button className="btn btn-success btn-block"  href="\thanks"><h6>Proceed to Pay</h6></button>
                                     
 
                                 </form><br/><br/>

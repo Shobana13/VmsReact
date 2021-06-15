@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import VehicleService from '../services/vehicleService';
-import Navbar from '../components/homepage/navbar';
+import NavBar from '../components/homepage/navbar';
 
 class Update extends Component {
 

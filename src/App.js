@@ -53,6 +53,7 @@ import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
+import ThanksPayment from './components/thanksPayment';
 
 
 import CreditCard from './components/creditCard';
@@ -147,7 +148,7 @@ function App() {
 
          <Route path="/creditcard" component={CreditCard}></Route>
           <Route path="/add-creditcard" component={AddCreditCard}></Route>
-         
+          <Route path="/thanks" component={ThanksPayment}></Route>
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
 
