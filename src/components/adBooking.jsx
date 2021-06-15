@@ -47,6 +47,7 @@ class AdBooking extends Component {
                             <div className="card-body">
                                 <form>
                                     <div className="form-group">
+
                                         <label><b>Booking Date:</b></label>
                                         <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />
                                     </div>
@@ -59,6 +60,21 @@ class AdBooking extends Component {
 
                                 </form><br/>
                                 <a class="btn btn-primary" href="\add-address1" role="button">Back</a>
+
+                                        <label>Booking Date:</label>
+                                        <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Booked Till Date:</label>
+                                        <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler} />
+
+                                    </div>
+                                    <button className="btn btn-success" onClick={this.saveBooking}> Save</button>
+                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
+
+                                </form>
+
+
                             </div>
                         </div>
                     </div>

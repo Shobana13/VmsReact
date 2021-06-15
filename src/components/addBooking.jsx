@@ -53,7 +53,13 @@ class AddBooking extends Component {
         this.setState({ bookingDescription: event.target.value })
     }
 
+
    
+  changeBookingDistanceHandler = (event) => {
+        this.setState({ distance: event.target.value })
+    }
+
+
     changeBookingDistanceHandler=(event) =>{
         this.setState({distance: event.target.value})
     }
