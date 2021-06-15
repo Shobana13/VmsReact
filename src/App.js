@@ -11,7 +11,6 @@ import UpdateAddress from './components/updateAddress';
 import ViewAddress from './components/viewAddress';
 import VehicleHomePage from './components/homepage/vehicleHomepage';
 import AdminHome from './components/adminComponent/adminHome';
-//import NavBar from './components/NavBar';
 import Vehicle from './components/vehicle';
 import AddVehicle from './components/addVehicle';
 import ViewVehicle from './components/viewVehicle';
@@ -34,12 +33,14 @@ import ViewPayment from './components/viewPayment';
 import UpdatePayment from './components/updatePayment';
 import AddPayment from './components/addPayment';
 import Payments from "./components/payments";
-import Paymentjs from "./components/paymentjs";
+import PaymentPage from "./components/paymentPage";
 import Booking from './components/booking';
 import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
+import CreditCard from './components/creditCard';
+import AddCreditCard from './components/addCreditCard';
 
 let emailId
 if (localStorage.getItem('emailId')) {
@@ -56,6 +57,7 @@ function App() {
         <Route path="/driver" exact component={Driver}></Route>
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
+
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
@@ -81,12 +83,15 @@ function App() {
           <Route path="/add-payment" component={AddPayment}></Route>
           <Route path="/view-payment/:paymentId" component={ViewPayment}></Route>
           <Route path="/update-payment/:paymentId" component={UpdatePayment}></Route>
-          <Route path="/makepayment" component={Paymentjs}></Route>
+          <Route path="/makepayment" component={PaymentPage}></Route>
 
           <Route path="/view-booking/:bookingId" component={ViewBooking}></Route>
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
+
+          <Route path="/creditcard" component={CreditCard}></Route>
+          <Route path="/add-creditcard" component={AddCreditCard}></Route>
          
       </Switch>
       <Footer/>
@@ -98,3 +103,4 @@ function App() {
 }
 
 export default App;
+
