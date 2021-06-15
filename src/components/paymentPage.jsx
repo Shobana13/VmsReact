@@ -25,7 +25,7 @@ class PaymentPage extends Component {
     }
     gotoHomePageHandle = () => {
         alert("Thanks for Booking")
-        this.props.history.push('/');
+        this.props.history.push('/thanks');
     }
     render() {
         return (
@@ -52,24 +52,24 @@ class PaymentPage extends Component {
                                                         <center>
                                                         <tr>
                                                             <td>
-                                                                <button className="btn"><img src={hdfcb} width="200px" height="200px" /></button>
+                                                                <button className="btn" onClick={this.gotoHomePageHandle}><img src={hdfcb} width="200px" height="200px" /></button>
                                                             </td>
                                                             <td>
-                                                                <button className="btn"><img src={sbi} width="200px" height="200px" /></button>
+                                                                <button className="btn" onClick={this.gotoHomePageHandle}><img src={sbi} width="200px" height="200px" /></button>
                                                             </td>
                                                             <td>
-                                                                <button className="btn"><img src={Axis1} width="200px" height="200px" /></button>
+                                                                <button className="btn" onClick={this.gotoHomePageHandle}><img src={Axis1} width="200px" height="200px" /></button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <button className="btn"><img src={icici} width="200px" height="200px" /></button>
+                                                                <button className="btn" onClick={this.gotoHomePageHandle}><img src={icici} width="200px" height="200px" /></button>
                                                             </td>
                                                             <td>
-                                                                <button className="btn"><img src={Kotak} width="200px" height="200px" /></button>
+                                                                <button className="btn" onClick={this.gotoHomePageHandle}><img src={Kotak} width="200px" height="200px" /></button>
                                                             </td>
                                                             <td>
-                                                                <button className="btn"><img src={pnb} width="200px" height="200px" /></button>
+                                                                <button className="btn" onClick={this.gotoHomePageHandle}><img src={pnb} width="200px" height="200px" /></button>
                                                             </td>
                                                         </tr>
                                                         </center>
@@ -133,22 +133,22 @@ class PaymentPage extends Component {
                                                         <center>
                                                             <tr>
                                                                 <td>
-                                                                    <button class="btn upi-button"><img src={amazonpay1} width="125px" height="125px" /></button>
+                                                                    <button class="btn upi-button" onClick={this.gotoHomePageHandle}><img src={amazonpay1} width="125px" height="125px" /></button>
                                                                 </td>
                                                                 <td>
-                                                                    <button class="btn upi-button"><img src={gpay} width="125px" height="125px" /></button>
+                                                                    <button class="btn upi-button" onClick={this.gotoHomePageHandle}><img src={gpay} width="125px" height="125px" /></button>
                                                                 </td>
                                                                 <td>
-                                                                    <button class="btn upi-button"><img src={phonepe} width="125px" height="125px" /></button>
+                                                                    <button class="btn upi-button" onClick={this.gotoHomePageHandle}><img src={phonepe} width="125px" height="125px" /></button>
                                                                 </td>
                                                                 <td>
-                                                                    <button class="btn upi-button"><img src={upi} width="125px" height="125px" /></button>
+                                                                    <button class="btn upi-button" onClick={this.gotoHomePageHandle}><img src={upi} width="125px" height="125px" /></button>
                                                                 </td>
                                                                 <td>
-                                                                    <button class="btn upi-button"><img src={mobikwik} width="125px" height="125px" /></button>
+                                                                    <button class="btn upi-button" onClick={this.gotoHomePageHandle}><img src={mobikwik} width="125px" height="125px" /></button>
                                                                 </td>
                                                                 <td>
-                                                                    <button class="btn upi-button"><img src={paytm} width="125px" height="125px" /></button>
+                                                                    <button class="btn upi-button" onClick={this.gotoHomePageHandle}><img src={paytm} width="125px" height="125px" /></button>
                                                                 </td>
                                                             </tr>
                                                         </center>
@@ -168,7 +168,7 @@ class PaymentPage extends Component {
                                     <div id="collapse4" class="panel-collapse collapse  pay-pad">
                                         <center> <h4 className="paymentjs-option">You can Switch to UPI or Card Payment Any Time while you Pay by Cash</h4>
                                         </center><br/>
-                                        
+                                        <a class="btn btn-success btn-block" href="\thanks" role="button">Proceed Payment</a> 
                                     </div>
                                 </div>
                             </div>

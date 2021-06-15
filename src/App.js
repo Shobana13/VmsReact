@@ -53,15 +53,19 @@ import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
-<<<<<<< HEAD
-=======
+
+import ThanksPayment from './components/thanksPayment';
+
+
+
+
 
 
 import CreditCard from './components/creditCard';
 import AddCreditCard from './components/addCreditCard';
 
 
->>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
+
 import TotalCost from './components/totalcost';
 import BookingHome from './components/BookingHome';
 
@@ -83,10 +87,10 @@ function App() {
         <Route path="/driver" exact component={Driver}></Route>
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
-<<<<<<< HEAD
+
         <Route path="/address" component={Address}></Route>
       
-=======
+
 
 
         <Route path="/" exact component={VehicleHomePage}></Route>
@@ -98,7 +102,7 @@ function App() {
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
 
 
->>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
+
         
 
       
@@ -107,23 +111,22 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
+
+
+
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
           <Route path="/add-address" component={CreateAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
-<<<<<<< HEAD
+
        
-=======
+
           <Route path="/address" component={Address}></Route>
 
 
->>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
           <Route path="/vehiclehome" component={VehicleHome}></Route>
@@ -158,7 +161,7 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
-<<<<<<< HEAD
+
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
         </div>
@@ -174,11 +177,11 @@ function App() {
      </Router>
      );
   }
-=======
+
 
          <Route path="/creditcard" component={CreditCard}></Route>
           <Route path="/add-creditcard" component={AddCreditCard}></Route>
-         
+          <Route path="/thanks" component={ThanksPayment}></Route>
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
 
@@ -191,7 +194,7 @@ function App() {
     </Router>
   );
 }
->>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
+
 
 export default App;
 
