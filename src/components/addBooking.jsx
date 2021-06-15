@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BookingService from '../services/bookingService';
 import Navbar from '../components/homepage/navbar';
 
+
 class AddBooking extends Component {
 
     constructor(props) {
@@ -20,12 +21,11 @@ class AddBooking extends Component {
         this.changeBookingTotalCostHandler = this.changeBookingTotalCostHandler.bind(this);
         this.changeBookingDistanceHandler = this.changeBookingDistanceHandler.bind(this);
         this.saveBooking = this.saveBooking.bind(this);
-        this.changeBookingIdHandler = this.changeBookingIdHandler.bind(this);
     }
 
     saveBooking = (e) => {
         e.preventDefault();
-        let booking = { bookingId: this.state.bookingId, bookingDate: this.state.bookingDate, bookedTillDate: this.state.bookedTillDate, bookingDescription: this.state.bookingDescription, totalCost: this.state.totalCost, distance: this.state.distance };
+        let booking = {bookingDate: this.state.bookingDate, bookedTillDate: this.state.bookedTillDate, bookingDescription: this.state.bookingDescription, totalCost: this.state.totalCost, distance: this.state.distance };
         console.log('booking => ' + JSON.stringify(booking));
 
         BookingService.addBooking(booking).then((res) => {
@@ -34,9 +34,7 @@ class AddBooking extends Component {
 
     }
 
-    changeBookingIdHandler = (event) => {
-        this.setState({ bookingId: event.target.value })
-    }
+   
 
     changeBookingDateHandler = (event) => {
         this.setState({ bookingDate: event.target.value })
@@ -55,9 +53,12 @@ class AddBooking extends Component {
         this.setState({ bookingDescription: event.target.value })
     }
 
-    changeBookingDistanceHandler = (event) => {
+
+   
+  changeBookingDistanceHandler = (event) => {
         this.setState({ distance: event.target.value })
     }
+
 
     changeBookingDistanceHandler=(event) =>{
         this.setState({distance: event.target.value})
@@ -79,10 +80,6 @@ class AddBooking extends Component {
                             <h3 className="text-center" style={{ marginTop: "30px" }}><b>Add Booking</b></h3>
                             <div className="card-body">
                                 <form>
-                                    <div className="form-group">
-                                        <label><b>BookningId:</b></label>
-                                        <input placeholder="Id" name="BookingId" className="form-control" value={this.state.bookingId} onChange={this.changeBookingIdHandler} />
-                                    </div>
                                     <div className="form-group">
                                         <label><b>Booking Date:</b></label>
                                         <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />

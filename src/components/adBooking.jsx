@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import { Card, Row, Col, Button, Container } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
-//import { setBookings } from "../../actions/booking_actions";
-//import booking_reducer from "../../reducers/booking_Reducer";
-//import booking_Types from "../../BookingService/booking_Types";
 import BookingService from '../services/bookingService';
 import Navbar from '../components/homepage/navbar';
-import Footer from "./homepage/footer";
+
+
 class AdBooking extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            bookingId: this.props.match.params.bookingId,
             bookingDate: '',
             bookedTillDate: '',
         }
@@ -23,14 +18,15 @@ class AdBooking extends Component {
 
     saveBooking = (e) => {
         e.preventDefault();
-        let booking = { bookingId: this.state.bookingId, bookingDate: this.state.bookingDate, bookedTillDate: this.state.bookedTillDate };
+        let booking = {bookingDate: this.state.bookingDate, bookedTillDate: this.state.bookedTillDate };
         console.log('booking => ' + JSON.stringify(booking));
 
-        BookingService.addBooking(booking).then((res) => {
-            this.props.history.push(`/booking`);
+        BookingService.adBooking(booking).then((res) => {
+            this.props.history.push(`/bookingHome`);
         });
 
     }
+
     changeBookingDateHandler = (event) => {
         this.setState({ bookingDate: event.target.value })
     }
@@ -39,22 +35,32 @@ class AdBooking extends Component {
         this.setState({ bookedTillDate: event.target.value })
     }
 
-    cancel() {
-        this.props.history.push('/booking');
-    }
+    
 
     render() {
         return (
-            <div>
-                <Navbar />
+            <div><Navbar />
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center">Add Booking</h3>
+                            <h3 className="text-center" style={{ marginTop: "30px" }}><b>Add Booking</b></h3>
                             <div className="card-body">
-
                                 <form>
                                     <div className="form-group">
+
+                                        <label><b>Booking Date:</b></label>
+                                        <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label><b>Booked Till Date:</b></label>
+                                        <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler} />
+                                    </div>
+                                    <a class="btn btn-primary btn-block" href="\bookingHome" role="button">Save</a><br/>
+                                    
+
+                                </form><br/>
+                                <a class="btn btn-primary" href="\add-address1" role="button">Back</a>
+
                                         <label>Booking Date:</label>
                                         <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />
                                     </div>
@@ -68,14 +74,16 @@ class AdBooking extends Component {
 
                                 </form>
 
+
                             </div>
                         </div>
                     </div>
-                </div>
-                <Footer />
+                </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
             </div>
         )
     }
 }
 
 export default AdBooking;
+//<button className="btn btn-success btn-block" onClick={this.saveBooking}> Save</button><br/><br/>

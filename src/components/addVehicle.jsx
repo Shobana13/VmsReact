@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import VehicleService from '../services/vehicleService';
+import Navbar from '../components/homepage/navbar';
 class AddVehicle extends Component {
     constructor(props) {
         super(props)
@@ -75,7 +76,8 @@ class AddVehicle extends Component {
 
     render() {
         return (
-            <div>
+            
+            <div><Navbar/><br/><br/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

@@ -12,6 +12,7 @@ class Booking extends Component {
         }
         //this.viewBooking = this.viewBooking.bind(this);
         this.addBooking = this.addBooking.bind(this);
+        this.adBooking = this.adBooking.bind(this);
         this.updateBookingDate = this.updateBookingDate.bind(this);
         this.cancelBooking = this.cancelBooking.bind(this);
     }
@@ -33,6 +34,9 @@ class Booking extends Component {
     }
     addBooking() {
         this.props.history.push('/add-booking');
+    }
+    adBooking() {
+        this.props.history.push('/ad-booking');
     }
     updateBookingDate(bookingId) {
         this.props.history.push(`/update-booking/${bookingId}`);

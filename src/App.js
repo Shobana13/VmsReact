@@ -53,8 +53,11 @@ import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
+
+
 import CreditCard from './components/creditCard';
 import AddCreditCard from './components/addCreditCard';
+
 
 import TotalCost from './components/totalcost';
 import BookingHome from './components/BookingHome';
@@ -87,9 +90,16 @@ function App() {
           <Route exact path="/register" component={Register} />
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
 
+
+        
+
+      
+ 
+
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+
 
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
@@ -97,6 +107,8 @@ function App() {
           <Route path="/add-address1" component={AddAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
+          <Route path="/address" component={Address}></Route>
+
 
 
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
@@ -134,13 +146,27 @@ function App() {
           <Route path="/ad-booking" component={AdBooking}></Route>
 
 
+
+
+
+
           <Route path="/creditcard" component={CreditCard}></Route>
           <Route path="/add-creditcard" component={AddCreditCard}></Route>
          
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
+
+        
+        <div className="body1">
+          <Route path="/makepayment" component={Paymentjs}></Route>
+
+          </div>
+        </div>
+      </Switch>
+
         </div>
       </Switch>      
+
     </Router>
   );
 }

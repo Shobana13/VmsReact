@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import paymentService from '../services/paymentService';
+import Navbar from "./homepage/navbar";
 
 
 class ViewPayment extends Component {
@@ -18,7 +19,7 @@ class ViewPayment extends Component {
     }
     render() { 
         return ( 
-            <div className="card col-md-6 offset-md-3">
+            <div className="card col-md-6 offset-md-3"><Navbar/>
                 <h3 className ="text-center"> View Payment Details</h3>
                 <div className="card bg-info text-dark">
                 <div className ="card-body">

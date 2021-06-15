@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DriverService from '../services/driverService';
 import Navbar from "./homepage/navbar";
+import Footer from "./homepage/footer";
 class AddDriver extends Component {
     constructor(props) {
         super(props)

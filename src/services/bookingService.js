@@ -10,6 +10,10 @@ class BookingService {
   async addBooking(booking) {
     return await axios.post(BOOKING_API_BASE_URL, booking);
   }
+  async adBooking(booking) {
+    return await axios.post(BOOKING_API_BASE_URL, booking);
+  }
+  
 
   async viewBooking(bookingId) {
     return await axios.get(BOOKING_API_BASE_URL + "/" + bookingId);

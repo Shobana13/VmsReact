@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddressService from '../services/addressService';
+import Navbar from '../components/homepage/navbar';
 
 
 class ViewAddress extends Component {
@@ -18,7 +19,7 @@ class ViewAddress extends Component {
     }
     render() { 
         return ( 
-            <div className="card col-md-6 offset-md-3">
+            <div className="card col-md-6 offset-md-3"><Navbar/><br/><br/>
                 <h3 className ="text-center"> View Address Details</h3>
                 <div className="card bg-info text-dark">
                 <div className ="card-body">
