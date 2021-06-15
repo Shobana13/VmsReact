@@ -140,13 +140,9 @@ function App() {
           <Route path="/bookinghome" component={BookingHome}></Route>
         </div>
         <div className="body1">
-          <Route path="/vehicledetails" component={VehicleDetails}></Route>
-          <Route path="/vehiclehome" component={VehicleHome}></Route>
-          <Route path="/driverhome" component={DriverHome}></Route>
-
           <Route path="/makepayment" component={Paymentjs}></Route>
 
-
+          </div>
         </div>
       </Switch>
     </Router>

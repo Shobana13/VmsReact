@@ -82,13 +82,16 @@ class AdBooking extends Component {
                                     <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
 
                                 </form>
-
+                                
+                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
                 <Footer />
             </div>
+           
         )
     }
 }
