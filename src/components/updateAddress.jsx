@@ -72,7 +72,7 @@ class UpdateAddress extends Component {
                                     </div>
                 
                                     <button className="btn btn-success" onClick={this.updateAddress}> Save</button>
-                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
+                                    <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
                                 </form>
                             

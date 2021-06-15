@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-//import { setvehicles } from "../actions/vehicle-actions";
 import { setvehicles, selectedVehicle } from "../actions/vehicle-actions";
 import vehicle_reducer from "../reducers/vehicle_reducer";
-//import { addItemToCart } from "../action/cart-action";
 import vehicle_Types from "../services/vehicle_Types";
+import Footer from "./homepage/footer";
 
   const { useEffect } = React;
 
@@ -53,6 +52,7 @@ function VehicleDetails() {
                     ))}
             </Row>
         </Container>
+        <Footer/>
     </div>
                    
                 );

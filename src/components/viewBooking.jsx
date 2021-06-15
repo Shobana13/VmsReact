@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import bookingService from '../services/bookingService';
-
+import Navbar from '../components/homepage/navbar';
 
 class ViewBooking extends Component {
     constructor(props){
@@ -19,6 +19,7 @@ class ViewBooking extends Component {
     
     render() { 
         return ( 
+            <div><Navbar/><br/><br/>
             <div className="card col-md-6 offset-md-3">
                 <h3 className ="text-center"> View Booking Details</h3>
                 <div className="card bg-info text-dark">
@@ -53,6 +54,7 @@ class ViewBooking extends Component {
                 <a class="btn btn-primary" href="\booking" role="button">Back</a>    
 
                 </div>
+            </div><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
          )
     }

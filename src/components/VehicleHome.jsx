@@ -1,5 +1,3 @@
-//import React from "react";
-//import { Link} from "react-router-dom";
 import { Link} from "react-router-dom";
 import React,{ Component }from "react";
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
@@ -9,7 +7,7 @@ import { setvehicles } from "../actions/vehicle-actions";
 import vehicle_reducer from "../reducers/vehicle_reducer";
 import vehicle_Types from "../services/vehicle_Types";
 import NavBar from '../components/homepage/navbar'
-//import Categories from "../components/categories";
+import Footer from "./homepage/footer";
 import { JournalArrowDown, PencilFill, PersonBoundingBox, PersonSquare, Truck, Wallet2 } from "react-bootstrap-icons";
 
 
@@ -85,12 +83,12 @@ function VehicleHome() {
                                             </Card.Body >
                                         </Card><br/><br/>
                                     </Col>
-                                   //<Button variant="primary">Book Now</Button>
 
                                 ))}
                         </Row>
-                        <a class="btn btn-primary" href="\" role="button">Back</a> 
-                    </Container>
+                        <a class="btn btn-primary" href="\" role="button">Back</a>
+                    </Container><br/>
+                    <Footer/>
                 </div>
                 
                
