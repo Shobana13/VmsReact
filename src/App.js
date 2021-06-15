@@ -85,12 +85,8 @@ function App() {
         <div className="body1" style={{ height: "100%" }}>
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
-
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
 
-        
-
-        <div className="body1" style={{height:"700px"}}>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
@@ -128,10 +124,10 @@ function App() {
           <Route path="/add-payment" component={AddPayment}></Route>
           <Route path="/view-payment/:paymentId" component={ViewPayment}></Route>
           <Route path="/update-payment/:paymentId" component={UpdatePayment}></Route>
-
+          <div className="body1">
           <Route path="/makepayment" component={PaymentPage}></Route>
-
-
+          </div>
+          
           <Route path="/view-booking/:bookingId" component={ViewBooking}></Route>
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
@@ -141,17 +137,10 @@ function App() {
           <Route path="/creditcard" component={CreditCard}></Route>
           <Route path="/add-creditcard" component={AddCreditCard}></Route>
          
-      </Switch>
-      <Footer/>
-     </Router>
-
-
-
-
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
-        
-      </Switch>
+        </div>
+      </Switch>      
     </Router>
   );
 }
