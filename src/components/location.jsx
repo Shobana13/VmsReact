@@ -1,37 +1,40 @@
 import React, { Component } from 'react';
-import { Building, HouseFill } from 'react-bootstrap-icons';
+import { Building, HouseFill,GeoAltFill } from 'react-bootstrap-icons';
+
 //import background from '../../image/background.jpg';
 //import DateRangePicker from 'react-bootstrap-daterangepicker';
 //import NavBar from './NavBar';
 //import Footer from './Footer';
 import { Link} from "react-router-dom";
+import Navbar from "./homepage/navbar";
+import Footer from "./homepage/footer";
 class Location extends Component {
     
     render() {
         return (  
-            <div class="body">       
+            <div class="body">   <Navbar/><br/><br/>    
             <div>
-                
+               
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
                         
                             <div class="jumbotron" style={{backgroundColor:"#c9ced1"}}>
-                            <h1 className="text-center"><b>CHOOSE PICK-UP LOCATION</b></h1>
+                            <h1 className="text-center"><b><GeoAltFill/>&nbsp;&nbsp;CHOOSE PICK-UP LOCATION</b></h1>
                             <div className="card-body ">
                             
                                 <form class="was-validated">
                                     
                                     <div class="form-check">
                                     <Link to="/company">
-                                     <b>&nbsp;<h2> <Building/>&nbsp;Pick up vehicle from Company Location</h2></b>
+                                     <b>&nbsp;<h2> <Building/>&nbsp;&nbsp;Pick up vehicle from Company Location</h2></b>
                                        </Link >
                                       
 
                                     </div><br/>
                                     <div class="form-check mb-3">
-                                    <Link to="/company">
-                                     <b><h2><HouseFill/>&nbsp;Deliver vehicle to your DoorSteps</h2></b>
+                                    <Link to="/add-address1">
+                                     <b><h2><HouseFill/>&nbsp;&nbsp;Deliver vehicle to your DoorSteps</h2></b>
                                        </Link >
                                     
 
@@ -52,6 +55,7 @@ class Location extends Component {
                 </div>
                 
             </div>
+            <Footer/>
             </div>  
         )
     } 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import AddressService from '../services/addressService';
-import Navbar from "./homepage/navbar";
 import Footer from "./homepage/footer";
-class CreateAddress extends Component {
+import Navbar from "./homepage/navbar";
+class AddAddress extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -13,7 +13,7 @@ class CreateAddress extends Component {
         this.changeStreetNameHandler = this.changeStreetNameHandler.bind(this);
         this.changeCityHandler = this.changeCityHandler.bind(this);
         this.saveAddress = this.saveAddress.bind(this);
-        this.changeIdHandler = this.changeIdHandler.bind(this);
+
     }
 
     saveAddress = (e) => {
@@ -27,9 +27,7 @@ class CreateAddress extends Component {
 
     }
 
-    changeIdHandler = (event) => {
-        this.setState({ addressId: event.target.value })
-    }
+
 
     changeStreetNameHandler = (event) => {
         this.setState({ streetName: event.target.value })
@@ -47,17 +45,13 @@ class CreateAddress extends Component {
 
     render() {
         return (
-            <div><Navbar />
+            <div><Navbar /><br /><br />
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center"><b>Add Address</b></h3>
+                            <h3 className="text-center"><b>ADD ADDRESS</b></h3>
                             <div className="card-body">
                                 <form>
-                                    <div className="form-group">
-                                        <label><b>AddressId:</b></label>
-                                        <input placeholder="Id" name="AddressId" className="form-control" value={this.state.addressId} onChange={this.changeIdHandler} />
-                                    </div>
                                     <div className="form-group">
                                         <label><b>StreetName:</b></label>
                                         <input placeholder="streetname" name="streetName" className="form-control" value={this.state.streetName} onChange={this.changeStreetNameHandler} />
@@ -75,11 +69,11 @@ class CreateAddress extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br /><br />
                 <Footer />
             </div>
         )
     }
 }
 
-export default CreateAddress;
+export default AddAddress;

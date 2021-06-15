@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from "./homepage/navbar"
 import AddressService from '../services/addressService';
 
+
 class Address extends Component {
     constructor(props) {
         super(props)
@@ -62,53 +63,53 @@ class Address extends Component {
     render() {
         return (
             <div>
-            <Navbar />
-            <div className="container">
-                <div>
-                
-                    <h2 className="text-center">Address List</h2>
-                    <div className="row">
-                        <button className="btn btn-info" onClick={this.addAddress}>Add Address</button>
-                    </div>
+                <Navbar />
+                <div className="container">
+                    <div>
 
-                    <form className="form-inline my-2 my-lg-0">
-                        <input
-                            className="form-control ml-auto" type="search" placeholder="search by Id" aria-label="search" onChange={this.onChange} />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="button" onClick={this.viewAddressById}> Search</button>
-                    </form>
+                        <h2 className="text-center">Address List</h2>
+                        <div className="row">
+                            <button className="btn btn-info" onClick={this.addAddress}>Add Address</button>
+                        </div>
 
-                    <div className="row">
-                        <table className="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>City</th>
-                                    <th>StreetName</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    this.state.addresses.map(
-                                        address =>
-                                            <tr key={address.addressId}>
-                                                <td>{address.city}</td>
-                                                <td>{address.streetName}</td>
-                                                <td>
-                                                    <button onClick={() => this.deleteAddress(address.addressId)} className="btn btn-danger">Delete</button>
-                                                    <button style={{ marginLeft: "10px" }} onClick={() => this.updateAddress(address.addressId)} className="btn btn-warning">Update</button>
-                                                    <button style={{ marginLeft: "10px" }} onClick={() => this.viewAddress(address.addressId)} className="btn btn-primary">View</button>
-                                                </td>
+                        <form className="form-inline my-2 my-lg-0">
+                            <input
+                                className="form-control ml-auto" type="search" placeholder="search by Id" aria-label="search" onChange={this.onChange} />
+                            <button className="btn btn-outline-success my-2 my-sm-0" type="button" onClick={this.viewAddressById}> Search</button>
+                        </form>
 
-                                            </tr>
+                        <div className="row">
+                            <table className="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>City</th>
+                                        <th>StreetName</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        this.state.addresses.map(
+                                            address =>
+                                                <tr key={address.addressId}>
+                                                    <td>{address.city}</td>
+                                                    <td>{address.streetName}</td>
+                                                    <td>
+                                                        <button onClick={() => this.deleteAddress(address.addressId)} className="btn btn-danger">Delete</button>
+                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.updateAddress(address.addressId)} className="btn btn-warning">Update</button>
+                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.viewAddress(address.addressId)} className="btn btn-primary">View</button>
+                                                    </td>
+
+                                                </tr>
                                         )
-                                }
-                            </tbody>
-                        </table>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <a class="btn btn-primary" href="\admin-components" role="button">Back</a>
                     </div>
-                    <a class="btn btn-primary" href="\admin-components" role="button">Back</a> 
                 </div>
             </div>
-        </div>
         );
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CustomerService from '../services/customerService';
+import Navbar from "./homepage/navbar";
 
 class UpdateCustomer extends Component {
 
@@ -69,10 +70,11 @@ class UpdateCustomer extends Component {
     render() { 
         return (  
             <div>
+                <Navbar/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center">Update Customer</h3>
+                            <h3 className="text-center"><br/>UPDATE CUSTOMER</h3>
                             <div className="card-body">
                                 <form>
                                     <h1>{this.props.match.params.customerId}</h1>
@@ -93,14 +95,14 @@ class UpdateCustomer extends Component {
                                         <input placeholder="Mobile Number" name="Mobile" className="form-control" value={this.state.mobileNumber} onChange={this.changeMobileHandler}/>
                                     </div>
                                     <button className="btn btn-success" onClick={this.updateCustomer}> Save</button>
-                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
+                                    <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
                                 </form>
                             
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br/><br/><br/>
 
             </div>
         )

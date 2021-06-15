@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
@@ -15,25 +14,24 @@ export default class Footer extends Component {
   render() {
     return (
       <div>
-        
-        <footer className="footer foot" style={{height:"100%"}}>
+
+        <footer className="footer foot" style={{ height: "100%" }}>
           <div className="container bottom_border">
             <div className="row">
               <div className=" col-sm-4 col-md col-sm-4  col-12 col">
                 <h5 className="headin5_amrc col_white_amrc pt2">About Us</h5>
-                {/* <!--headin5_amrc--> */}
                 <p className="mb10">
                   <Link to="/" style={{ textDecoration: "none" }}>
                     RentalRides.com
                   </Link>
-                  
+
                 </p>
-    
+
               </div>
 
               <div className=" col-sm-4 col-md  col-6 col">
                 <h5 className="headin5_amrc col_white_amrc pt2">Quick links</h5>
-              
+
                 <ul className="footer_ul_amrc">
                   <li>
                     <a href="http://webenlance.com">Contact Us</a>
@@ -91,12 +89,12 @@ export default class Footer extends Component {
                   </li>
                   <li className="ll">
                     <a href="#">
-                     <Facebook/>&nbsp;https://facebook.com/RRides
+                      <Facebook />&nbsp;https://facebook.com/RRides
                     </a>
                   </li>
                   <li className="ll">
                     <a href="#">
-                      <Instagram/>&nbsp;https://instagram.com/RRides
+                      <Instagram />&nbsp;https://instagram.com/RRides
                     </a>
                   </li>
                   <li className="ll">
@@ -106,7 +104,7 @@ export default class Footer extends Component {
                   </li>
                   <li className="ll">
                     <a href="">
-                      <br/>
+                      <br />
                       <Phone />
                       &nbsp;WhatsApp Business:
                       &nbsp;&nbsp;&nbsp;&nbsp;+910000000000
@@ -114,7 +112,7 @@ export default class Footer extends Component {
                   </li>
                 </ul>
               </div>
-            </div>     
+            </div>
           </div>
 
           <div class="container">
