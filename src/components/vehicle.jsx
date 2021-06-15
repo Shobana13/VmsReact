@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import VehicleService from "../services/vehicleService";
+<<<<<<< HEAD
+import Navbar1 from "./navbar1";
+=======
 import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 
 
@@ -10,6 +14,7 @@ class Vehicle extends Component {
         super(props)
         this.state = {
             vehicles: [],
+            //search:''
         }
         this.addVehicle = this.addVehicle.bind(this);
         this.update = this.update.bind(this);
@@ -34,6 +39,14 @@ class Vehicle extends Component {
         this.setState({ vehicles });
         VehicleService.deleteVehicleById(vehicleId);
     };
+    // getVehicleByLocation = () => {
+    //  let vehicles = [];
+    // VehicleService.getVehicleByLocation(this.state.search).then((res) => {
+    // vehicles = res.data;
+    // this.setState({ vehicles });
+    // console.log(this.state.vehicles);
+    // });
+    // }
 
     onChange = (event) => {
         console.log(event.target.value);
@@ -50,10 +63,15 @@ class Vehicle extends Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
+                <Navbar1 />
+                <div className="container">
+=======
                 <NavBar/>
                 <div className="container"><br/><br/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
-                    <h1 className="text-center"><h1>VEHICLES LIST</h1></h1>
+                    <h1 className="text-center">Vehicles List</h1>
                     <div className="row">
                         <button className="btn-right btn-info btn-lg mb-3" onClick={this.addVehicle}>Add Vehicle</button>
                     </div>
@@ -109,3 +127,19 @@ class Vehicle extends Component {
     }
 }
 export default Vehicle;
+/*<form className="form-inline my-2 my-lg-0">
+            <input
+                className="form-control ml-auto"
+                type="search"
+                name="name"
+                placeholder="Search by location"
+                aria-label="Search"
+                onChange={this.onChange}
+            />
+            <button
+                className="btn btn-outline-success my-2 my-sm-0"
+                type="button"
+                onClick={this.getVehicleByLocation}
+            >Search
+      </button>
+        </form>*/

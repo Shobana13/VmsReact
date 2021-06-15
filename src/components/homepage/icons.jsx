@@ -3,11 +3,11 @@ import { Key } from "react-bootstrap-icons";
 class Icons extends Component {
   render() {
     return (
-
+    
       <div class="container" style={{ "text-align": "center" }}>
-        <h2 style={{ "text-align": "left", "fontFamily": "-moz-initial" }}>Why Ride With Us?</h2>
-        <br />
-        <br />
+        <h2 style={{ "text-align": "left" ,"fontFamily":"-moz-initial"}}>Why Ride With Us?</h2>
+        <br/>
+        <br/>
         <div class="row">
           <div class="col">
             <div class="info_09o1">
@@ -35,8 +35,8 @@ class Icons extends Component {
             </div>
           </div>
         </div>
-        <br />
-        <br />
+        <br/>
+        <br/>
         <div class="row">
           <div class="col">
             <div class="info_09o1">

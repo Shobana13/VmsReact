@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap-daterangepicker/daterangepicker.css';
 //import carpark from '../../image/carpark.jpg';
+<<<<<<< HEAD
+import Navbar from "./homepage/navbar";
+=======
 
 import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
-import Footer from './homepage/footer';
 
 class MiniBusLocation extends Component {
     render() {
@@ -40,10 +43,9 @@ class MiniBusLocation extends Component {
                                         
                                     
                         </div>
-                    </div><a class="btn btn-primary" href="\vehicleHome" role="button">Back</a>
+                    </div>
                 </div>
-            </div><br/>
-            <Footer/>
+            </div>
 
             </div>
         )

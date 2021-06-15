@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import CustomerService from '../services/customerService';
+<<<<<<< HEAD
+=======
 import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 
 class UpdateCustomer extends Component {
 
@@ -70,11 +73,14 @@ class UpdateCustomer extends Component {
     render() { 
         return (  
             <div>
+<<<<<<< HEAD
+=======
                 <NavBar/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center"><br/>UPDATE CUSTOMER</h3>
+                            <h3 className="text-center">Update Customer</h3>
                             <div className="card-body">
                                 <form>
                                     <h1>{this.props.match.params.customerId}</h1>
@@ -95,14 +101,14 @@ class UpdateCustomer extends Component {
                                         <input placeholder="Mobile Number" name="Mobile" className="form-control" value={this.state.mobileNumber} onChange={this.changeMobileHandler}/>
                                     </div>
                                     <button className="btn btn-success" onClick={this.updateCustomer}> Save</button>
-                                    <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
+                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
                                 </form>
                             
                             </div>
                         </div>
                     </div>
-                </div><br/><br/><br/>
+                </div>
 
             </div>
         )

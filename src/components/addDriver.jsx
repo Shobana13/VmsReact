@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
 import DriverService from '../services/driverService';
+<<<<<<< HEAD
+=======
 import NavBar from '../components/homepage/navbar'
 import Footer from "./homepage/footer";
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 class AddDriver extends Component {
-    constructor(props) {
+    constructor(props){
         super(props)
         this.state = {
-            firstName: '',
+            firstName:'',
             lastName: '',
-            contactNumber: '',
-            email: '',
-            address: '',
-            chargesPerDay: '',
-            licenseNo: ''
+            contactNumber:'',
+            email:'',
+            address:'',
+            chargesPerDay:'',
+            licenseNo:''
         }
-        this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
-        this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
-        this.changeContactNumberHandler = this.changeContactNumberHandler.bind(this);
-        this.changeEmailHandler = this.changeEmailHandler.bind(this);
-        this.changeAddressHandler = this.changeAddressHandler.bind(this);
-        this.changeChargesPerDayHandler = this.changeChargesPerDayHandler.bind(this);
-        this.changeLicenseNoHandler = this.changeLicenseNoHandler.bind(this);
-        this.saveDriver = this.saveDriver.bind(this);
+        this.changeFirstNameHandler=this.changeFirstNameHandler.bind(this);
+        this.changeLastNameHandler=this.changeLastNameHandler.bind(this);
+        this.changeContactNumberHandler=this.changeContactNumberHandler.bind(this);
+        this.changeEmailHandler=this.changeEmailHandler.bind(this);
+        this.changeAddressHandler=this.changeAddressHandler.bind(this);
+        this.changeChargesPerDayHandler=this.changeChargesPerDayHandler.bind(this);
+        this.changeLicenseNoHandler=this.changeLicenseNoHandler.bind(this);
+        this.saveDriver=this.saveDriver.bind(this);
     }
 
     saveDriver = (e) => {
         e.preventDefault();
-        let driver = { firstName: this.state.firstName, lastName: this.state.lastName, contactNumber: this.state.contactNumber, email: this.state.email, address: this.state.address, chargesPerDay: this.state.chargesPerDay, licenseNo: this.state.licenseNo };
-        console.log('driver => ' + JSON.stringify(driver));
+        let driver={firstName: this.state.firstName, lastName: this.state.lastName,contactNumber: this.state.contactNumber,email: this.state.email,address: this.state.address,chargesPerDay: this.state.chargesPerDay,licenseNo: this.state.licenseNo};
+        console.log('driver => '+ JSON.stringify(driver));
 
         DriverService.addDriver(driver).then(res => {
             this.props.history.push(`/driver`);
@@ -35,79 +38,85 @@ class AddDriver extends Component {
 
     }
 
-    changeFirstNameHandler = (event) => {
-        this.setState({ firstName: event.target.value })
+    changeFirstNameHandler=(event) =>{
+        this.setState({firstName: event.target.value})
     }
 
-    changeLastNameHandler = (event) => {
-        this.setState({ lastName: event.target.value })
+    changeLastNameHandler=(event) =>{
+        this.setState({lastName: event.target.value})
     }
 
-    changeContactNumberHandler = (event) => {
-        this.setState({ contactNumber: event.target.value })
+    changeContactNumberHandler=(event) =>{
+        this.setState({contactNumber: event.target.value})
     }
 
-    changeEmailHandler = (event) => {
-        this.setState({ email: event.target.value })
+    changeEmailHandler=(event) =>{
+        this.setState({email: event.target.value})
     }
-    changeAddressHandler = (event) => {
-        this.setState({ address: event.target.value })
+    changeAddressHandler=(event) =>{
+        this.setState({address: event.target.value})
     }
-    changeChargesPerDayHandler = (event) => {
-        this.setState({ chargesPerDay: event.target.value })
+    changeChargesPerDayHandler=(event) =>{
+        this.setState({chargesPerDay: event.target.value})
     }
-    changeLicenseNoHandler = (event) => {
-        this.setState({ licenseNo: event.target.value })
+    changeLicenseNoHandler=(event) =>{
+        this.setState({licenseNo: event.target.value})
     }
 
-    cancel() {
+    cancel(){
         this.props.history.push('/driver');
     }
 
 
 
+<<<<<<< HEAD
+    render() { 
+        return (  
+            <div>
+=======
     render() {
         return (
             <div><NavBar /><br />
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center"><h2>ADD DRIVER</h2></h3>
+                            <h3 className="text-center">Add Driver</h3>
                             <div className="card-body">
                                 <form>
                                     <div className="form-group text-left">
                                         <label>FirstName:</label>
-                                        <input placeholder="FirstName" name="FirstName" className="form-control" value={this.state.firstName} onChange={this.changeFirstNameHandler} />
+                                        <input placeholder="FirstName" name="FirstName" className="form-control" value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
                                     </div>
                                     <div className="form-group text-left">
                                         <label>LastName:</label>
-                                        <input placeholder="LastName" name="LastName" className="form-control" value={this.state.lastName} onChange={this.changeLastNameHandler} />
+                                        <input placeholder="LastName" name="LastName" className="form-control" value={this.state.lastName} onChange={this.changeLastNameHandler}/>
                                     </div>
                                     <div className="form-group text-left">
                                         <label>ContactNumber:</label>
-                                        <input placeholder="ContactNumber" name="ContactNumber" className="form-control" value={this.state.contactNumber} onChange={this.changeContactNumberHandler} />
+                                        <input placeholder="ContactNumber" name="ContactNumber" className="form-control" value={this.state.contactNumber} onChange={this.changeContactNumberHandler}/>
                                     </div>
                                     <div className="form-group text-left">
                                         <label>Email:</label>
-                                        <input placeholder="Email" name="Email" className="form-control" value={this.state.email} onChange={this.changeEmailHandler} />
+                                        <input placeholder="Email" name="Email" className="form-control" value={this.state.email} onChange={this.changeEmailHandler}/>
                                     </div>
                                     <div className="form-group text-left">
                                         <label>Address:</label>
-                                        <input placeholder="Address" name="Address" className="form-control" value={this.state.address} onChange={this.changeAddressHandler} />
+                                        <input placeholder="Address" name="Address" className="form-control" value={this.state.address} onChange={this.changeAddressHandler}/>
                                     </div>
                                     <div className="form-group text-left">
                                         <label>ChargesPerDay:</label>
-                                        <input placeholder="ChargesPerDay" name="ChargesPerDay" className="form-control" value={this.state.chargesPerDay} onChange={this.changeChargesPerDayHandler} />
+                                        <input placeholder="ChargesPerDay" name="ChargesPerDay" className="form-control" value={this.state.chargesPerDay} onChange={this.changeChargesPerDayHandler}/>
                                     </div>
                                     <div className="form-group text-left">
                                         <label>LicenseNo:</label>
-                                        <input placeholder="LicenseNo" name="LicenseNo" className="form-control" value={this.state.licenseNo} onChange={this.changeLicenseNoHandler} />
+                                        <input placeholder="LicenseNo" name="LicenseNo" className="form-control" value={this.state.licenseNo} onChange={this.changeLicenseNoHandler}/>
                                     </div>
-                                    <button className="btn btn-success " onClick={this.saveDriver}> Save</button>
-                                    <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
+                                    <button className="btn btn-success float-right" onClick={this.saveDriver}> Save</button>
+                                    <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
                                 </form>
-
+                            
                             </div>
                         </div>
                     </div>
@@ -117,5 +126,5 @@ class AddDriver extends Component {
         )
     }
 }
-
+ 
 export default AddDriver;

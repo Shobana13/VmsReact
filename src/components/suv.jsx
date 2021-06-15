@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import carpark from '../../image/carpark.jpg';
 import Navbar from '../components/homepage/navbar'
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
-import Footer from './homepage/footer';
 
 class Suv extends Component {
     render() {
@@ -33,8 +32,7 @@ class Suv extends Component {
                             </div><br/><br/><br/>
                         </div><br/><br/><br/><br/><br/>
                        
-                        <div className="caed col-md-6"> 
-                        
+                        <div className="caed col-md-6">
 
 
                             
@@ -68,12 +66,11 @@ class Suv extends Component {
                             
                                         
                                     
-                   
                         </div>
-                        </div><a class="btn btn-primary" href="\vehicleHome" role="button">Back</a>
                     </div>
-            </div><br/>
-<Footer/>
+                </div>
+            </div>
+
             </div>
             
         )

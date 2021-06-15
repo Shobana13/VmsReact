@@ -21,16 +21,14 @@ const history= useHistory();
  loginUser(loginDetails)
  if(loginDetails.emailId==="admin123@gmail.com" && loginDetails.password==="admin"){
              
-  history.push(`/admin-components`);
-   }
+    history.push(`/admin-components`);
+  }
    else {
-       history.push(`/`);
+      
+    history.push(`/`);
 
-   }
-
- 
-
-  };
+  }
+};
   return (
     
     <div>
@@ -86,7 +84,12 @@ const history= useHistory();
     <br/>
     <br/>
     <br/>
+<<<<<<< HEAD
+    <br/>
+    <Footer/>
+=======
     <br/><Footer/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
   </div>
   
   );

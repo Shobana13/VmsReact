@@ -7,6 +7,7 @@ const INITIAL_STATE = {
 const userReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
     case actionTypes.USER_LOGIN:
+    //case actionTypes.USER_REGISTER:
     console.log("payload",payload)
     localStorage.setItem('emailId',payload.emailId)
     localStorage.setItem('userId',payload.customerId)

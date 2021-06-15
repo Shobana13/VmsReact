@@ -80,7 +80,7 @@ class Customer extends Component {
                 <br />
                 <br />
 
-                <form style={{ "marginRight": "50px" }} className="form-inline my-2 my-lg-0">
+                <form className="form-inline my-2 my-lg-0">
                     <input
                         className="form-control ml-auto"
                         type="search"
@@ -99,7 +99,7 @@ class Customer extends Component {
                     <h2 className="text-center">Customers List</h2>
                     <div className="row">
                         <button className="btn btn-info" onClick={this.addCustomer}>Add Customer</button>
-                    </div><br />
+                    </div>
                     <div className="row">
                         <table className="table table-striped table-bordered">
                             <thead>
@@ -132,7 +132,7 @@ class Customer extends Component {
                             </tbody>
                         </table>
                     </div>
-                    <a class="btn btn-primary" href="\admin-components" role="button">Back</a>
+                    <a class="btn btn-primary" href="\admin-components" role="button">Back</a> 
                 </div>
             </div>
         );

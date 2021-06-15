@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import DriverService from '../services/driverService';
+<<<<<<< HEAD
+
+=======
 import NavBar from '../components/homepage/navbar'
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 class UpdateDriver extends Component {
 
     constructor(props){
@@ -89,11 +93,15 @@ class UpdateDriver extends Component {
 
     render() { 
         return (  
+<<<<<<< HEAD
+            <div>
+=======
             <div><NavBar/>
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
-                            <h3 className="text-center"><br/>UPDATE DRIVER</h3>
+                            <h3 className="text-center">Update Driver</h3>
                             <div className="card-body">
                                 <form>
                                     <h1>{this.props.match.params.driverId}</h1>
@@ -125,7 +133,7 @@ class UpdateDriver extends Component {
                                         <label>LicenseNo:</label>
                                         <input placeholder="LicenseNo" name="LicenseNo" className="form-control" value={this.state.licenseNo} onChange={this.changeLicenseNoHandler}/>
                                     </div>
-                                    <button className="btn btn-success " onClick={this.updateDriver}> Save</button>
+                                    <button className="btn btn-success float-right" onClick={this.updateDriver}> Save</button>
                                     <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
                                 </form>

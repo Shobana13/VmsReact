@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import carpark from '../../image/carpark.jpg';
 import NavBar from '../components/homepage/navbar'
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
-import Footer from './homepage/footer';
 
 class Sedan extends Component {
     render() {
@@ -71,10 +70,10 @@ BHP
                                         
                                     
                         </div>
-                    </div><a class="btn btn-primary" href="\vehicleHome" role="button">Back</a>
+                    </div>
                 </div>
-            </div><br/>
-<Footer/>
+            </div>
+
             </div>
             
         )
@@ -86,3 +85,4 @@ BHP
 }
 
 export default Sedan;
+////<Card.Img variant="top"  src="https://imgd.aeplcdn.com/664x374/cw/ec/34288/Hyundai-i20-Active-Exterior-126611.jpg?wm=0&q=85"/>

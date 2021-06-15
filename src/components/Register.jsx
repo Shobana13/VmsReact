@@ -3,8 +3,13 @@ import React from "react";
 import {Link,useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {registerUser} from '../actions/userActions'
+<<<<<<< HEAD
+import Navbar from "./homepage/navbar";
+import Footer from "../components/homepage/footer"
+=======
 import Navbar from '../components/homepage/navbar'
 import Footer from "./homepage/footer";
+>>>>>>> 1b8939dc07cbbb155a1aa3cf2f8dded49fd001e1
 const { useState } = React;
 function Register({registerUser}) {
   const history = useHistory();

@@ -52,7 +52,7 @@ class ViewVehicle extends Component {
                     </div>
                     <div className ="row">
                         <label><b>Vehicle Capacity: </b></label>
-                        <div>{this.state.vehicle.capacity}</div>
+                        <div>{this.state.vehicle.capacity}</div> 
                     </div>
                     <div className ="row">
                         <label><b>Vehicle ChargesPerKM: </b></label>
