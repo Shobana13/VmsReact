@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import driverService from '../services/driverService';
-
+import Navbar from "./homepage/navbar";
 
 class ViewDriver extends Component {
     constructor(props){
@@ -18,9 +18,10 @@ class ViewDriver extends Component {
     }
     render() { 
         return ( 
+            <div><Navbar/><br/>
             <div className="card col-md-6 offset-md-3">
                 <h3 className ="text-center"> View Driver Details</h3>
-                <div className="card bg-info text-dark">
+                <div className="card bg-dark text-light">
                 <div className ="card-body">
                 <h1>{this.props.match.params.driverId}</h1>
                     <div className ="row">
@@ -57,8 +58,9 @@ class ViewDriver extends Component {
                     </div>
                         
                 </div>
-
+                <a class="btn btn-primary" href="\driver" role="button">Back</a>    
                 </div>
+            </div><br/><br/><br/><br/><br/><br/>
             </div>
          )
     }

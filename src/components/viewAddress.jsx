@@ -33,6 +33,7 @@ class ViewAddress extends Component {
                     </div>
                         
                 </div>
+                <a class="btn btn-primary" href="\address" role="button">Back</a>    
 
                 </div>
             </div>

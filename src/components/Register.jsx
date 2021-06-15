@@ -3,6 +3,8 @@ import React from "react";
 import {Link,useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {registerUser} from '../actions/userActions'
+import Navbar from "./homepage/navbar";
+import Footer from "./homepage/footer";
 const { useState } = React;
 function Register({registerUser}) {
   const history = useHistory();
@@ -21,13 +23,17 @@ function Register({registerUser}) {
   };
 
   return (
-    <div class="body">
+    <div class="body1">
+      <Navbar/>
     <div className="mt-5 ">
+      <h1 style={{textAlign:"center"}}><b>Register</b></h1>
       <form onSubmit={submitHandler} style={{ width: "480px", margin: "auto" }}>
+        
         <div>
+
           <label className="mt-2 mb-2" for="firstname" class="form-label">
             {" "}
-            FirstName
+            <b>FirstName</b>
           </label>
           <input
             type="text"
@@ -39,7 +45,7 @@ function Register({registerUser}) {
           />
           <label className="mt-2 mb-2" for="lastname" class="form-label">
             {" "}
-            LastName
+            <b>LastName</b>
           </label>
           <input
             type="text"
@@ -52,7 +58,7 @@ function Register({registerUser}) {
         
           <label className="mt-2 mb-2" for="mobilenumber" class="form-label">
             {" "}
-            Mobile Number
+            <b>Mobile Number</b>
           </label>
           <input
             type="text"
@@ -65,10 +71,10 @@ function Register({registerUser}) {
 
           <label for="emailId" className="form-label">
           {" "}
-            EmailId
+            <b>Email</b>
           </label>
           <input
-            type="emailId"
+            type="emailId"  
             class="form-control"
             id="emailId"
             placeholder="emailId"
@@ -79,7 +85,7 @@ function Register({registerUser}) {
         <div class="mb-3 mt-2">
           <label for="password" class="form-label">
             {" "}
-            Password
+           <b>Password</b>
           </label>
           <input
             type="password"
@@ -92,10 +98,16 @@ function Register({registerUser}) {
         </div>
         <div className="mt-2">
           <button className="btn btn-primary button-large btn-block">Register</button>
+          <span><b>Already an User!<a href="\login">SignIn?</a></b></span>
         </div>
       </form>
+      <br/>
+      <br/>
     </div>
+    <Footer/>
     </div>
+  
+    
   );
 }
 const mapStateToProps = state => {

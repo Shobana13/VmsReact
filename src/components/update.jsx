@@ -134,7 +134,7 @@ class Update extends Component {
                                         <label>FixedCharges:</label>
                                         <input placeholder="FixedCharges" name="FixedCharges" className="form-control" value={this.state.fixedCharges} onChange={this.changeFixedChargesHandler}/>
                                     </div>
-                                    <button className="btn btn-success float-right" onClick={this.update}>Save</button>
+                                    <button className="btn btn-success " onClick={this.update}>Save</button>
                                     <button className="btn btn-danger float-right" onClick={this.cancel.bind(this)} style={{marginLeft:"10px"}}>Cancel</button>
 
                                 </form>

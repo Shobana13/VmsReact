@@ -1,6 +1,18 @@
-.body1 {
-	  background-image: url("../images/back.jpg");
+
+  
+  .body1{
+    background-image: url("../images/s.jpg");
 	  background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: absolute;
+    
+
   }
+  .home{
+    background-image: url("../images/s.jpg");
+	  background-size: cover;
+    background-attachment: fixed;
+    background-position: absolute;
+
+  }   
+  

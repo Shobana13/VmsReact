@@ -1,4 +1,4 @@
-//import React from "react";
+import { Link} from "react-router-dom";
 import React,{ Component }from "react";
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 import VehicleService from "../services/vehicleService";
@@ -7,6 +7,8 @@ import { setvehicles } from "../actions/vehicle-actions";
 import vehicle_reducer from "../reducers/vehicle_reducer";
 import vehicle_Types from "../services/vehicle_Types";
 import NavBar from '../components/homepage/navbar'
+import Footer from "./homepage/footer";
+import { JournalArrowDown, PencilFill, PersonBoundingBox, PersonSquare, Truck, Wallet2 } from "react-bootstrap-icons";
 
 
 const { useEffect } = React;
@@ -29,13 +31,42 @@ function VehicleHome() {
     }, []);
     console.log(vehicles);
 
-
-   
-
     return (
         <div>
              <NavBar/>
-                    <Container style={{ marginTop: "51px" }}>
+             <div class="sidebar-container sid ">
+          <ul class="sidebar-navigation">
+            <li class="header" style={{ paddingLeft: "0px" }}>
+              <h2>DASHBOARD</h2>
+            </li>
+            <li>
+              <Link to="/suv">
+                   <b><h4>MODEL- SUV</h4></b>
+              </Link>
+              </li>
+              <li>
+              <Link to="/hatchBack">
+                   <b><h4>MODEL- HATCHBACK</h4></b>
+              </Link>
+              </li>
+              <li>
+              <Link to="/sedan">
+                   <b><h4>MODEL- SEDAN</h4></b>
+              </Link>
+              </li>
+              <li>
+              <Link to="/miniBus">
+                   <b><h4>MODEL- MINIBUS</h4></b>
+              </Link>
+              </li>
+              <li>
+              <Link to="/coach">
+                   <b><h4>MODEL- COACH</h4></b>
+              </Link>
+              </li>
+              </ul>
+              </div>
+                    <Container style={{ marginTop: "51px", marginLeft:"300px" }}>
                         <Row xs={1} md={3} className="g-4">
                             {vehicles.length &&
                                 vehicles.map((vehicle) => (
@@ -45,19 +76,23 @@ function VehicleHome() {
                                             <Card.Body style={{backgroundColor: '#dfebe8'}}>
                                                 <img src={""} alt={vehicle.title} />
                                                 <Card.Text><h3>Category:</h3>  {vehicle.category}</Card.Text>
-                                                <Card.Text><h3>Description:</h3> {vehicle.description}</Card.Text>
                                                 <Card.Text><h3>Capacity:</h3>{vehicle.capacity}</Card.Text>
                                                 <Card.Text><h3>VehicleNumber:</h3>   {vehicle.vehicleNumber}</Card.Text>
-                                                <Button variant="primary">Book Now</Button>
+                                                <Card.Text><h3>ChargesPerKM:</h3>   {vehicle.chargesPerKM}</Card.Text>
+                                                <a class="btn btn-primary" href="\location" role="button">Book Now</a>
                                             </Card.Body >
                                         </Card><br/><br/>
                                     </Col>
-                                   
 
                                 ))}
                         </Row>
-                    </Container>
+                        <a class="btn btn-primary" href="\" role="button">Back</a>
+                    </Container><br/>
+                    <Footer/>
                 </div>
+                
+               
+                
   );
 }
                             

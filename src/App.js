@@ -7,6 +7,7 @@ import CreateCustomer from './components/createCustomer';
 import UpdateCustomer from './components/updateCustomer';
 import Address from './components/address';
 import CreateAddress from './components/createAddress';
+import AddAddress from './components/addAddress';
 import UpdateAddress from './components/updateAddress';
 import ViewAddress from './components/viewAddress';
 import VehicleHomePage from './components/homepage/vehicleHomepage';
@@ -24,6 +25,19 @@ import Register from './components/Register';
 import VehicleHome from './components/VehicleHome';
 import DriverHome from './components/DriverHome';
 import VehicleDetails from './components/vehicleDetails';
+import Location from './components/location';
+import CompanyLocation from './components/companyLocation';
+import LucknowLocation from './components/lucknowLocation';
+import ChennaiLocation from './components/chennaiLocation';
+import BengaluruLocation from './components/bengaluruLocation';
+import DelhiLocation from './components/delhiLocation';
+import MumbaiLocation from './components/mumbaiLocation';
+import Company from './components/company';
+import Suv from './components/suv';
+import Sedan from './components/sedan'
+import MiniBus from './components/miniBus'
+import Coach from './components/coach'
+import Hatchback from './components/hatchback'
 import Footer from './components/homepage/footer';
 import { loadUser } from './actions/userActions'
 import { useEffect } from 'react'
@@ -42,6 +56,10 @@ import AdBooking from './components/adBooking';
 import CreditCard from './components/creditCard';
 import AddCreditCard from './components/addCreditCard';
 
+import TotalCost from './components/totalcost';
+import BookingHome from './components/BookingHome';
+
+
 let emailId
 if (localStorage.getItem('emailId')) {
   emailId = localStorage.getItem('emailId')
@@ -49,46 +67,76 @@ if (localStorage.getItem('emailId')) {
 }
 function App() {
   return (
+
     <Router>
       <Switch>
-        <Route path="/" exact component={VehicleHomePage}></Route>
+
+        <Route path="/admin-components" component={AdminHome}></Route>
         <Route path="/customers" component={Customer}></Route>
         <Route path="/vehicle" exact component={Vehicle}></Route>
         <Route path="/driver" exact component={Driver}></Route>
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
 
+
+        <Route path="/" exact component={VehicleHomePage}></Route>
+
+
+        <div className="body1" style={{ height: "100%" }}>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+
+        
+
+        <div className="body1" style={{height:"700px"}}>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
-          <Route path="/address" component={Address}></Route>
           <Route path="/add-address" component={CreateAddress}></Route>
+          <Route path="/add-address1" component={AddAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
-          <Route path="/admin-components" component={AdminHome}></Route>
+
 
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
           <Route path="/vehiclehome" component={VehicleHome}></Route>
           <Route path="/driverhome" component={DriverHome}></Route>
-
+          <Route path="/location" component={Location}></Route>
+          <Route path="/lucknowlocation" component={LucknowLocation}></Route>
+          <Route path="/companyLocation" component={CompanyLocation}></Route>
+          <Route path="/chennaiLocation" component={ChennaiLocation}></Route>
+          <Route path="/bengaluruLocation" component={BengaluruLocation}></Route>
+          <Route path="/delhiLocation" component={DelhiLocation}></Route>
+          <Route path="/mumbaiLocation" component={MumbaiLocation}></Route>
+          <Route path="/company" component={Company}></Route>
+          <Route path="/suv" component={Suv}></Route>
+          <Route path="/hatchback" component={Hatchback}></Route>
+          <Route path="/sedan" component={Sedan}></Route>
+          <Route path="/miniBus" component={MiniBus}></Route>
+          <Route path="/coach" component={Coach}></Route>
           <Route path="/add-vehicle" component={AddVehicle}></Route>
           <Route path="/view-vehicle/:vehicleId" component={ViewVehicle}></Route>
           <Route path="/update-vehicles/:vehicleId" component={Update}></Route>
           <Route path="/add-driver" component={AddDriver}></Route>
           <Route path="/view-driver/:driverId" component={ViewDriver}></Route>
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/register' component={Register} />
           <Route path="/update-drivers/:driverId" component={UpdateDriver}></Route>
-
           <Route path="/add-payment" component={AddPayment}></Route>
           <Route path="/view-payment/:paymentId" component={ViewPayment}></Route>
           <Route path="/update-payment/:paymentId" component={UpdatePayment}></Route>
+
           <Route path="/makepayment" component={PaymentPage}></Route>
+
 
           <Route path="/view-booking/:bookingId" component={ViewBooking}></Route>
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
+
 
           <Route path="/creditcard" component={CreditCard}></Route>
           <Route path="/add-creditcard" component={AddCreditCard}></Route>
@@ -96,10 +144,16 @@ function App() {
       </Switch>
       <Footer/>
      </Router>
-         
 
+
+
+
+          <Route path="/totalcost" component={TotalCost}></Route>
+          <Route path="/bookinghome" component={BookingHome}></Route>
+        
+      </Switch>
+    </Router>
   );
-  
 }
 
 export default App;

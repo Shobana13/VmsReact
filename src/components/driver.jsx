@@ -58,75 +58,76 @@ class Driver extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
-                <br/>
-                <br/>
+                <Navbar />
+                <br />
+                <br />
                 <div className="container">
-                <form className="form-inline my-2 my-lg-0">
-                    <input
-                        className="form-control ml-auto"
-                        type="search"
-                        name="name"
-                        placeholder="Search by name"
-                        aria-label="Search"
-                        onChange={this.onChange}
-                    />
-                    <button
-                        className="btn btn-outline-success my-2 my-sm-0"
-                        type="button"
-                        onClick={this.getDriverByFirstName}
-                    >Search
-              </button>
-                </form>
-                <h2 className="text-center">Drivers List</h2>
-                <div className="row">
-                    <button className="btn-right btn-info btn-lg mb-3" onClick={this.addDriver}>Add Driver</button>
-                </div>
-                <div className="row">
-                    <table className="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>FirstName</th>
-                                <th>LastName</th>
-                                <th>MobileNumber</th>
-                                <th>Email</th>
-                                <th>Address</th>
-                                <th>ChargesPerday</th>
-                                <th>LicenseNo </th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                this.state.drivers.map(
-                                    driver =>
-                                        <tr key={driver.driverId}>
-                                            <td>{driver.firstName}</td>
-                                            <td>{driver.lastName}</td>
-                                            <td>{driver.contactNumber}</td>
-                                            <td>{driver.email}</td>
-                                            <td>{driver.address}</td>
-                                            <td>{driver.chargesPerDay}</td>
-                                            <td>{driver.licenseNo}</td>
-                                            <td>
+                    <form className="form-inline my-2 my-lg-0">
+                        <input
+                            className="form-control ml-auto"
+                            type="search"
+                            name="name"
+                            placeholder="Search by name"
+                            aria-label="Search"
+                            onChange={this.onChange}
+                        />
+                        <button
+                            className="btn btn-outline-success my-2 my-sm-0"
+                            type="button"
+                            onClick={this.getDriverByFirstName}
+                        >Search
+                        </button>
+                    </form>
+                    <h2 className="text-center"><h1>DRIVERS LIST</h1></h2>
+                    <div className="row">
+                        <button className="btn-right btn-info btn-lg mb-3" onClick={this.addDriver}>Add Driver</button>
+                    </div>
+                    <div className="row">
+                        <table className="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>MobileNumber</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>ChargesPerday</th>
+                                    <th>LicenseNo </th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    this.state.drivers.map(
+                                        driver =>
+                                            <tr key={driver.driverId}>
+                                                <td>{driver.firstName}</td>
+                                                <td>{driver.lastName}</td>
+                                                <td>{driver.contactNumber}</td>
+                                                <td>{driver.email}</td>
+                                                <td>{driver.address}</td>
+                                                <td>{driver.chargesPerDay}</td>
+                                                <td>{driver.licenseNo}</td>
                                                 <td>
-                                                    <button style={{ marginLeft: "10px" }} onClick={() => this.updateDriver(driver.driverId)} className="btn btn-warning ml-2 float-right">Update</button>
+                                                    <td>
+                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.updateDriver(driver.driverId)} className="btn btn-warning ml-2 float-right">Update</button>
+                                                    </td>
+                                                    <td>
+                                                        <button className="btn btn-danger ml-2 float-right" onClick={() => this.deleteDriverById(driver.driverId)}>Delete</button>
+                                                    </td>
+                                                    <td>
+                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.viewDriver(driver.driverId)} className="btn btn-primary ml-2 float-right">View</button>
+                                                    </td>
                                                 </td>
-                                                <td>
-                                                    <button className="btn btn-danger ml-2 float-right" onClick={() => this.deleteDriverById(driver.driverId)}>Delete</button>
-                                                </td>
-                                                <td>
-                                                    <button style={{ marginLeft: "10px" }} onClick={() => this.viewDriver(driver.driverId)} className="btn btn-primary ml-2 float-right">View</button>
-                                                </td>
-                                            </td>
-                                        </tr>
-                                )
-                            }
-                        </tbody>
-                    </table>
+                                            </tr>
+                                    )
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <a class="btn btn-primary" href="\admin-components" role="button">Back</a>
                 </div>
             </div>
-        </div>
         );
     }
 }

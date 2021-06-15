@@ -1,51 +1,53 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 import "./adminHome.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "../homepage/navbar";
+import { JournalArrowDown, PencilFill, PersonBoundingBox, PersonSquare, Truck, Wallet2 } from "react-bootstrap-icons";
+
 
 class AdminHome extends React.Component {
   render() {
     return (
+
       <div>
-        <div class="sidebar-container sid">
-          <div class="sidebar-logo">
-            <h4>Online Vehicle Rental Management System</h4>
-          </div>
+        <Navbar />
+        <div class="sidebar-container sid1">
           <ul class="sidebar-navigation">
             <li class="header" style={{ paddingLeft: "0px" }}>
-              <h5>OPERATIONS</h5>
+              <h5>DASHBOARD</h5>
             </li>
             <li>
               <Link to="/customers">
-                   Customer
-              </Link>
+                <b><PersonBoundingBox />&nbsp;Customer</b>
+              </Link >
             </li>
             <li>
               <Link to="/address">
-                   Address
+                <b><PencilFill />&nbsp;Address</b>
               </Link>
             </li>
             <li>
               <Link to="/vehicle">
-                   Vehicle
+                <b><Truck />&nbsp;Vehicle</b>
               </Link>
             </li>
             <li>
               <Link to="/driver">
-                   Driver
+                <b><PersonSquare />&nbsp;Driver</b>
               </Link>
             </li>
             <li>
               <Link to="/booking">
-                   Booking
+                <b><JournalArrowDown />&nbsp;Booking</b>
               </Link>
             </li>
             <li>
               <Link to="/payment">
-                   Payment
+                <b><Wallet2 />&nbsp;Payment</b>
               </Link>
             </li>
-            
+
           </ul>
         </div>
 
@@ -54,10 +56,10 @@ class AdminHome extends React.Component {
             <div class="jumbotron jj">
               <h1>ADMIN</h1>
               <p>
-              Administrator can add/modify the vehicle details, approve / reject the vehicles to the customers, view vehicles, view customers, view booking requests, view details of vehicles rented and payment details.
+                Administrator can add/modify the vehicle details, approve / reject the vehicles to the customers, view vehicles, view customers, view booking requests, view details of vehicles rented and payment details.
 
               </p>
-            
+
               <p>
                 <Link
                   to="/"
@@ -72,6 +74,7 @@ class AdminHome extends React.Component {
           </div>
         </div>
       </div>
+
     );
   }
 }
