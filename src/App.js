@@ -145,26 +145,16 @@ function App() {
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
 
-
-
-
-
-
-          <Route path="/creditcard" component={CreditCard}></Route>
+         <Route path="/creditcard" component={CreditCard}></Route>
           <Route path="/add-creditcard" component={AddCreditCard}></Route>
          
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
 
-        
-        <div className="body1">
-          <Route path="/makepayment" component={Paymentjs}></Route>
-
-          </div>
         </div>
-      </Switch>
+      
 
-        </div>
+      
       </Switch>      
 
     </Router>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap-daterangepicker/daterangepicker.css';
 //import carpark from '../../image/carpark.jpg';
 import { Building, GeoAltFill} from 'react-bootstrap-icons';
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import Footer from "./homepage/footer";
 
 class LucknowLocation extends Component {
@@ -12,7 +12,7 @@ class LucknowLocation extends Component {
         return (
             
             <div class="body">
-            <Navbar/>
+            <NavBar/>
             <div>
                 <div className="container" style={{marginLeft:"300px"}}>
                     <div className="row">

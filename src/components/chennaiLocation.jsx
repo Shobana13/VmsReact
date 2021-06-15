@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Building, GeoAltFill } from 'react-bootstrap-icons';
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 import Footer from "./homepage/footer";
 
@@ -11,7 +11,7 @@ class ChennaiLocation extends Component {
         return (
 
             <div class="body">
-                <Navbar />
+                <NavBar/>
                 <div>
                     <div className="container" style={{ marginLeft: "300px" }}>
                         <div className="row">

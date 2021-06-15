@@ -7,6 +7,7 @@ import vehicle_reducer from "../reducers/vehicle_reducer";
 import vehicle_Types from "../services/vehicle_Types";
 import Footer from "./homepage/footer";
 
+
   const { useEffect } = React;
 
 const axios = require("axios");

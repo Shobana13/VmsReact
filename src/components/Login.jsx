@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios'
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import { connect } from "react-redux";
 import {  useHistory } from "react-router";
 import { loginUser } from "../actions/userActions";
@@ -34,7 +34,7 @@ const history= useHistory();
   return (
     
     <div>
-    <Navbar/>
+    <NavBar/>
     <div className="body">
     <div className="mt-5 ">
     <h1 style={{textAlign:"center"}}><b>Login</b></h1>

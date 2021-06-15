@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import VehicleService from "../services/vehicleService";
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 
 
@@ -50,7 +50,7 @@ class Vehicle extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
+                <NavBar/>
                 <div className="container"><br/><br/>
 
                     <h1 className="text-center"><h1>VEHICLES LIST</h1></h1>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CreditCardService from '../services/creditCardService';
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 class CreditCard extends Component {
     constructor(props){
@@ -38,7 +38,7 @@ class CreditCard extends Component {
         
         return (
             <div>
-            <Navbar/>
+            <NavBar/>
             <div className="container">
 
                 <h2 className="text-center">Credit Card List</h2>

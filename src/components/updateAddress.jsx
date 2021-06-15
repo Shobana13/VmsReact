@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AddressService from '../services/addressService';
-import Navbar from '../components/homepage/navbar';
+import NavBar from '../components/homepage/navbar'
 
 class UpdateAddress extends Component {
 
@@ -55,7 +55,7 @@ class UpdateAddress extends Component {
 
     render(){
         return (  
-            <div><Navbar/><br/><br/>
+            <div><NavBar/><br/><br/>
                 <div className="container">
                     <div className="row">
                         <div className="card col-md-6 offset-md-3 offset-md-3">

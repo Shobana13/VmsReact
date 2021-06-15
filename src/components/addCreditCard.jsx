@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CreditCardService from '../services/creditCardService';
 import "../CustomCSS/paymentcss.css";
+import NavBar from '../components/homepage/navbar'
+import Footer from "./homepage/footer";
 
 class AddCreditCard extends Component {
 
@@ -62,7 +64,7 @@ class AddCreditCard extends Component {
     
     render() { 
         return (  
-            <div>
+            <div><NavBar/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3 pay-pad">
@@ -89,13 +91,13 @@ class AddCreditCard extends Component {
                                     <button className="btn btn-success btn-block" onClick={this.saveCreditCard}><h6>Proceed to Pay</h6></button>
                                     
 
-                                </form>
-                            
+                                </form><br/><br/>
+                                <a class="btn btn-primary" href="\makepayment" role="button">Back</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
+<Footer/>
             </div>
         )
     }

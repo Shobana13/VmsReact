@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import hdfcb from "../images/hdfcb.jpg";
 import sbi from "../images/sbi.jpg";
 import Axis1 from "../images/Axis1.jpg";
@@ -14,6 +14,7 @@ import phonepe from "../images/phonepe.jpg";
 import upi from "../images/upi.jpg";
 import mobikwik from "../images/mobikwik.jpg";
 import paytm from "../images/paytm.jpg";
+import Footer from './homepage/footer';
 
 class PaymentPage extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class PaymentPage extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NavBar />
 
                 <div class="body2">
 
@@ -174,9 +175,10 @@ class PaymentPage extends Component {
 
                         </div>
                         {/**Ending Tag */}
-                    </div>
-
+                    </div><br/>
+                    <a class="btn btn-primary" style={{marginLeft:"150px"}}  href="\bookingHome" role="button">Back</a>
                 </div><br/><br/><br/><br/>
+                <Footer/>
             </div>
         )
     }

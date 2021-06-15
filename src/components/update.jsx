@@ -90,7 +90,7 @@ class Update extends Component {
 
     render() { 
         return (  
-            <div><Navbar/><br/><br/>
+            <div><NavBar/><br/><br/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

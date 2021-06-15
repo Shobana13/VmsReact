@@ -22,7 +22,7 @@ class View extends Component {
     
     render() { 
         return ( 
-            <div><Navbar/><br/><br/>
+            <div><NavBar/><br/><br/>
             <div className="card col-md-6 offset-md-3">
                 <h3 className ="text-center"> View Booking Details</h3>
                 <div className="card bg-info text-dark">
