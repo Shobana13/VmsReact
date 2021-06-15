@@ -53,7 +53,12 @@ import ViewBooking from './components/viewBooking';
 import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
+
 import View from './components/view';
+
+import TotalCost from './components/totalcost';
+import BookingHome from './components/BookingHome';
+
 
 let emailId
 if (localStorage.getItem('emailId')) {
@@ -72,7 +77,7 @@ function App() {
         <Route path="/driver" exact component={Driver}></Route>
         <Route path="/payment" exact component={Payment}></Route>
         <Route path="/booking" exact component={Booking}></Route>
-        <Route path="/address" component={Address}></Route>
+
         <Route path="/" exact component={VehicleHomePage}></Route>
 
 
@@ -80,6 +85,14 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+
+        
+
+        <div className="body1" style={{height:"700px"}}>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route path="/view-customers/:customerId" component={ViewCustomer}></Route>
+
           <Route path="/add-customer" component={CreateCustomer}></Route>
           <Route path="/update-customers/:customerId" component={UpdateCustomer}></Route>
           <Route path="/add-address" component={CreateAddress}></Route>
@@ -117,9 +130,19 @@ function App() {
           <Route path="/add-booking" component={AddBooking}></Route>
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
+
           <Route path="/view" component={View}></Route>
 
 
+
+
+          <Route path="/totalcost" component={TotalCost}></Route>
+          <Route path="/bookinghome" component={BookingHome}></Route>
+        </div>
+        <div className="body1">
+          <Route path="/vehicledetails" component={VehicleDetails}></Route>
+          <Route path="/vehiclehome" component={VehicleHome}></Route>
+          <Route path="/driverhome" component={DriverHome}></Route>
 
           <Route path="/makepayment" component={Paymentjs}></Route>
 

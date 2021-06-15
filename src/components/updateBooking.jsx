@@ -88,27 +88,27 @@ class UpdateBooking extends Component {
                                 <h1>{this.props.match.params.bookingId}</h1>
 
                                 <div className="form-group">
-                                        <label>BookingId:</label>
+                                        <label><b>BookingId:</b></label>
                                         <input placeholder="BookingId" name="BookingId" className="form-control" value={this.state.bookingId} onChange={this.changeBookingIdHandler}/>
                                 </div>
                                     <div className="form-group">
-                                        <label>BookingDate:</label>
+                                        <label><b>BookingDate:</b></label>
                                         <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>BookedTillDate:</label>
+                                        <label><b>BookedTillDate:</b></label>
                                         <input placeholder="BookedTillDate" name="BookedTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>BookingDescription</label>
+                                        <label><b>BookingDescription</b></label>
                                         <input placeholder="BookingDescription" name="BookingDescription" className="form-control" value={this.state.bookingDescription} onChange={this.changeBookingDescriptionHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>TotalCost:</label>
+                                        <label><b>TotalCost:</b></label>
                                         <input placeholder="TotalCost" name="TotalCost" className="form-control" value={this.state.totalCost} onChange={this.changeTotalCostHandler}/>
                                     </div>
                                     <div className="form-group">
-                                        <label>Distance</label>
+                                        <label><b>Distance</b></label>
                                         <input placeholder="Distance" name="Distance" className="form-control" value={this.state.distance} onChange={this.changeDistanceHandler}/>
                                     </div>
                                     <button className="btn btn-success" onClick={this.updateBookingDate}>Save</button>

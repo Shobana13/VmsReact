@@ -52,6 +52,7 @@ class AdBooking extends Component {
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
                             <h3 className="text-center">Add Booking</h3>
                             <div className="card-body">
+
                                 <form>
                                     <div className="form-group">
                                         <label>Booking Date:</label>
@@ -60,6 +61,20 @@ class AdBooking extends Component {
                                     <div className="form-group">
                                         <label>Booked Till Date:</label>
                                         <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler} />
+
+                                <form>                              
+                                    <div className="form-group">
+                                        <label><b>BookningId:</b></label>
+                                        <input placeholder="Id" name="BookingId" className="form-control" value={this.state.bookingId} onChange={this.changeBookingIdHandler}/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label><b>Booking Date:</b></label>
+                                        <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler}/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label><b>Booked Till Date:</b></label>
+                                        <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler}/>
+
                                     </div>
 
 
