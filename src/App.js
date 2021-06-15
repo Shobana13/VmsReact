@@ -54,8 +54,6 @@ import AddBooking from './components/addBooking';
 import UpdateBooking from './components/updateBooking';
 import AdBooking from './components/adBooking';
 
-import View from './components/view';
-
 import TotalCost from './components/totalcost';
 import BookingHome from './components/BookingHome';
 
@@ -88,9 +86,7 @@ function App() {
 
         
 
-        <div className="body1" style={{height:"700px"}}>
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
+      
  
 
           <Route path="/add-customer" component={CreateCustomer}></Route>
@@ -99,6 +95,8 @@ function App() {
           <Route path="/add-address1" component={AddAddress}></Route>
           <Route path="/update-address/:addressId" component={UpdateAddress}></Route>
           <Route path="/view-address/:addressId" component={ViewAddress}></Route>
+          <Route path="/address" component={Address}></Route>
+
 
 
           <Route path="/vehicledetails" component={VehicleDetails}></Route>
@@ -131,14 +129,11 @@ function App() {
           <Route path="/update-booking/:bookingId" component={UpdateBooking}></Route>
           <Route path="/ad-booking" component={AdBooking}></Route>
 
-          <Route path="/view" component={View}></Route>
-
-
 
 
           <Route path="/totalcost" component={TotalCost}></Route>
           <Route path="/bookinghome" component={BookingHome}></Route>
-        </div>
+        
         <div className="body1">
           <Route path="/makepayment" component={Paymentjs}></Route>
 

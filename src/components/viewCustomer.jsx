@@ -24,7 +24,7 @@ class ViewCustomer extends Component {
            
             <div className="card col-md-6 offset-md-3" >
                 
-                <h3 className ="text-center"> View Customer Details</h3>
+                <h3 className ="text-center"><b>VIEW CUSTOMER DETAILS</b></h3>
                 <div className="card bg-dark text-light">
                 <div className ="card-body">
                 <h1>{this.props.match.params.customerId}</h1>

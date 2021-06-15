@@ -12,12 +12,12 @@ const history= useHistory();
   const [loginDetails, setLoginDetails] = useState({
     emailId: "",
     password: "",
-    //userRole:"",
+  
   });
 
   const submitHandler = async(e) => {
     e.preventDefault();
-    // loginUser(loginDetails);
+    
  loginUser(loginDetails)
  if(loginDetails.emailId==="admin123@gmail.com" && loginDetails.password==="admin"){
              
@@ -71,23 +71,7 @@ const history= useHistory();
             value={loginDetails.password}
           />
         </div>
-        {/*<div class="mb-3 mt-2">
-          <label for="userRole" class="form-label">
-            {" "}
-            <h2>UserRole</h2>
-          </label>
-          <select type="userRole"
-            class="form-control"
-            id="userRole"
-            placeholder="userRole"
-            onChange={(e) =>
-              setLoginDetails({ ...loginDetails, userRole: e.target.value })
-            }
-            value={loginDetails.userRole}>
-            <option>Admin</option>
-            <option>Customer</option>
-          </select>
-          </div>*/}     
+          
         
         <div className="mt-2">
       
@@ -102,8 +86,9 @@ const history= useHistory();
     <br/>
     <br/>
     <br/>
-    <br/>
+    <br/><Footer/>
   </div>
+  
   );
 }
 
@@ -113,14 +98,8 @@ const mapStateToProps = state => {
     loggedIn: state.user.loggedIn
   }
 }
-//const mapDispatchToProps = dispatch => {
-//   return {
-//     loginUser: () => dispatch(loginUser())
-//   }
-// }
- 
 
-<Footer/>
+
 
 export default connect(
   mapStateToProps,

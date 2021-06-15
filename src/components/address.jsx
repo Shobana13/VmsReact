@@ -9,7 +9,7 @@ class Address extends Component {
 
         this.state = {
 
-            search: "",
+            
             addresses: []
         }
 
@@ -44,20 +44,8 @@ class Address extends Component {
         });
     }
 
-    viewAddressById = () => {
-        let addresss = [];
-        AddressService.getAddressById(this.state.search).then((res) => {
-            console.log("**data: ", res.data);
-            addresss = res.data;
-            this.setState({ addresss });
-        });
-
-        console.log("**viewAddress" + this.state.addresss);
-    };
-    onChange = (event) => {
-        console.log(event.target.value);
-        this.setState({ search: event.target.value });
-    };
+   
+    
 
 
     render() {
@@ -70,13 +58,7 @@ class Address extends Component {
                         <h2 className="text-center">Address List</h2>
                         <div className="row">
                             <button className="btn btn-info" onClick={this.addAddress}>Add Address</button>
-                        </div>
-
-                        <form className="form-inline my-2 my-lg-0">
-                            <input
-                                className="form-control ml-auto" type="search" placeholder="search by Id" aria-label="search" onChange={this.onChange} />
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="button" onClick={this.viewAddressById}> Search</button>
-                        </form>
+                        </div><br/><br/>
 
                         <div className="row">
                             <table className="table table-striped table-bordered">
@@ -108,7 +90,7 @@ class Address extends Component {
                         </div>
                         <a class="btn btn-primary" href="\admin-components" role="button">Back</a>
                     </div>
-                </div>
+                </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         );
     }
