@@ -3,7 +3,7 @@ import React from "react";
 import {Link,useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {registerUser} from '../actions/userActions'
-import Navbar from "./homepage/navbar";
+import Navbar from '../components/homepage/navbar'
 import Footer from "./homepage/footer";
 const { useState } = React;
 function Register({registerUser}) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AddressService from '../services/addressService';
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import Footer from "./homepage/footer";
 class CreateAddress extends Component {
     constructor(props) {
@@ -47,7 +47,7 @@ class CreateAddress extends Component {
 
     render() {
         return (
-            <div><Navbar />
+            <div><NavBar />
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

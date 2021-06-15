@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CustomerService from '../services/customerService';
-import Navbar from "./homepage/navbar";
+import NavBar from "./homepage/navbar";
 
 
 class ViewCustomer extends Component {
@@ -20,7 +20,7 @@ class ViewCustomer extends Component {
     render() { 
         return ( 
             <div >
-        <Navbar/><br/><br/>
+        <NavBar/><br/><br/>
            
             <div className="card col-md-6 offset-md-3" >
                 

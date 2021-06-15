@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CustomerService from '../services/customerService';
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 class UpdateCustomer extends Component {
 
@@ -70,7 +70,7 @@ class UpdateCustomer extends Component {
     render() { 
         return (  
             <div>
-                <Navbar/>
+                <NavBar/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

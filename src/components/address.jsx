@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from "./homepage/navbar"
+import NavBar from '../components/homepage/navbar'
 import AddressService from '../services/addressService';
 
 
@@ -51,7 +51,7 @@ class Address extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NavBar/>
                 <div className="container">
                     <div>
 

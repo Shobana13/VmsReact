@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DriverService from '../services/driverService';
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 class UpdateDriver extends Component {
 
     constructor(props){
@@ -89,7 +89,7 @@ class UpdateDriver extends Component {
 
     render() { 
         return (  
-            <div><Navbar/>
+            <div><NavBar/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DriverService from "../services/driverService";
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 
 class Driver extends Component {
@@ -58,7 +58,7 @@ class Driver extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NavBar />
                 <br />
                 <br />
                 <div className="container">

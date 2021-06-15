@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BookingService from '../services/bookingService';
 import Navbar from '../components/homepage/navbar';
+import Footer from "./homepage/footer";
 
 
 class AdBooking extends Component {
@@ -49,37 +50,25 @@ class AdBooking extends Component {
                                     <div className="form-group">
 
                                         <label><b>Booking Date:</b></label>
-                                        <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />
+                                        <input placeholder="YYYY-MM-DD" type="date" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />
                                     </div>
                                     <div className="form-group">
                                         <label><b>Booked Till Date:</b></label>
-                                        <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler} />
+                                        <input placeholder="YYYY-MM-DD" type="date" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler} />
                                     </div>
-                                    <a class="btn btn-primary btn-block" href="\bookingHome" role="button">Save</a><br/>
+                                    <a class="btn btn-success btn-block" href="\bookingHome" role="button">Proceed</a><br/>
+                                    <a class="btn btn-primary" href="\company" role="button">Back</a><br/>
                                     
 
                                 </form><br/>
-                                <a class="btn btn-primary" href="\add-address1" role="button">Back</a>
-
-                                        <label>Booking Date:</label>
-                                        <input placeholder="BookingDate" name="BookingDate" className="form-control" value={this.state.bookingDate} onChange={this.changeBookingDateHandler} />
-                                    </div>
-                                    <div className="form-group">
-                                        <label>Booked Till Date:</label>
-                                        <input placeholder="BookingTillDate" name="BookinkingTillDate" className="form-control" value={this.state.bookedTillDate} onChange={this.changeBookedTillDateHandler} />
-
-                                    </div>
-                                    <button className="btn btn-success" onClick={this.saveBooking}> Save</button>
-                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
-
-                                </form>
-
+                                
 
                             </div>
                         </div>
+                       
                     </div>
-                </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
+                </div><br/><br/><br/><br/>
+                <Footer />
             </div>
         )
     }

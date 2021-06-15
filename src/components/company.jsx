@@ -7,7 +7,7 @@ import loc from "../images/loc.jpg"
 import delhi1 from "../images/delhi1.jpg"
 import mumbai from "../images/mumbai.jpg"
 import { Link } from "react-router-dom";
-import Navbar from "./homepage/navbar";
+import Navbar from '../components/homepage/navbar'
 import Footer from "./homepage/footer";
 
 class Company extends Component {
@@ -26,7 +26,7 @@ class Company extends Component {
 
                 <div class="body2">
 
-                    <div ><br /><br /><br /><br />
+                    <div ><br />
 
                         <div class="container paymentjscontainer">
                             <center>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap-daterangepicker/daterangepicker.css';
 //import carpark from '../../image/carpark.jpg';
 
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 import Footer from './homepage/footer';
 
@@ -13,7 +13,7 @@ class MiniBusLocation extends Component {
         return (
             
             <div class="body">
-            <Navbar/>
+            <NavBar/>
             <div>
                 <div className="container" >
                     <div className="row">

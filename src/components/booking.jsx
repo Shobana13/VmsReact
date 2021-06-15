@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BookingService from "../services/bookingService";
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 
 class Booking extends Component {
     constructor(props) {
@@ -52,7 +52,7 @@ class Booking extends Component {
     render() {
         return (
             <div>
-                <Navbar /><br /><br /><br /><br />
+                <NavBar /><br /><br /><br /><br />
                 <div className="container">
                     <h2 className="text-center"><h2>BOOKING LIST</h2></h2>
                     <div className="row">

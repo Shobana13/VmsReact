@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { Building, HouseFill,GeoAltFill } from 'react-bootstrap-icons';
-
-//import background from '../../image/background.jpg';
-//import DateRangePicker from 'react-bootstrap-daterangepicker';
-//import NavBar from './NavBar';
-//import Footer from './Footer';
 import { Link} from "react-router-dom";
-import Navbar from "./homepage/navbar";
+import Navbar from './homepage/navbar'
 import Footer from "./homepage/footer";
 class Location extends Component {
     

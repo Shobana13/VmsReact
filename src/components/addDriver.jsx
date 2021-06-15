@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DriverService from '../services/driverService';
-import Navbar from "./homepage/navbar";
+import NavBar from '../components/homepage/navbar'
 import Footer from "./homepage/footer";
 class AddDriver extends Component {
     constructor(props) {
@@ -68,7 +68,7 @@ class AddDriver extends Component {
 
     render() {
         return (
-            <div><Navbar /><br />
+            <div><NavBar /><br />
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">

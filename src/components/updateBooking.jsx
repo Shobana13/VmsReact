@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BookingService from '../services/bookingService';
-import Navbar from '../components/homepage/navbar';
+import NavBar from '../components/homepage/navbar'
 
 class UpdateBooking extends Component {
 
@@ -78,7 +78,7 @@ class UpdateBooking extends Component {
 
     render() { 
         return (  
-            <div><Navbar/>
+            <div><NavBar/>
                 <div className="container">
                     <div className="row">
                         <div className="caed col-md-6 offset-md-3 offset-md-3">
